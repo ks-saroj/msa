@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  font-family: "Montserrat", serif;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+html,
+body {
+  height: 100%;
+}
+.primary-btn{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 191px;
+  padding: 0px 20px;
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none !important;
+  border: none;
+  border-radius: 50px;
+  line-height: 44px;
+  height: 44px;
+  background: #00ACB3;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.ks-smb{
+  margin-bottom: 100px;
+}
+.ks-spt{
+  padding-top: 100px;
+}
+.ks-spb{
+  padding-bottom: 100px;
+}
+.ks-font-merriweather{
+  font-family: "Merriweather", serif ;
+}
+.primary-btn span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 10px;
+}
+.primary-link-color{
+  color: #0E1164;
+}
+.light-blue{
+  color: #19647E;
+}
+.dark-blue{
+  color: #0E1164 !important;
+}
+.container {
+  width: 100%;
+  max-width: 1170px;
+}
+img.cover-image{
+  object-fit: cover;
+  object-position: center;
+}
+.ks-btn{
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 50px;
+  min-width: 230px;
+  line-height: 24px;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+}
+.ks-btn-light{
+  background: #ffffff;
+  color: #000000;
+}
+
+#masthead{
+  display: none;
+}
+.section-title{
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  text-align: left;
+  margin-bottom: 60px;
+}
+.section-subtitle{
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+/**======================
+Hero Section Starts
+=========================*/
+.hero-section {
+  position: relative;
+  padding: 200px 0;
+  background: url(../images/circle1.png) left bottom no-repeat, #c3e5e1;
+  background-size: 249px;
+  z-index: 1;
+  margin-bottom: 100px;
+}
+.single-post .hero-section,
+.single-page .hero-section{
+  padding: 75px 0;
+}
+#front-page .hero-section{
+  background: none;
+  padding: 0;
+}
+#front-page .hero-section::before{
+  background: none !important;
+}
+#front-page #hero-section-overlay{
+  background-color: rgba(0,0,0,0.25);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+#front-page .hero-section .hero-section-text{
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  left: 0;
+  z-index: 3;
+  color: #ffffff;
+  text-align: left;
+}
+.hero-section-title{
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 65px;
+}
+/**======================
+Section Emergency Starts
+=========================*/
+.emergency-section{
+  background-image: url("../images/emergency-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:480px;
+  position: relative;
+}
+.background-overlay{
+  background-color: rgba(0,0,0,0.25);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.emergency-text-container{
+  max-width: 540px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  align-items: flex-start;
+  position: relative;
+}
+.emergency-section .emergency-text{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #ffffff;
+}
+/**======================
+Section Service Starts
+=========================*/
+.service-section{
+  /*background-attachment: fixed;*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  position: relative;
+}
+.service-section .slick-slide {
+  margin: 0 20px;
+}
+.service-section .slick-list {
+  margin: 0 -20px;
+}
+.service-section .slider-box figure img{
+  height: 336px;
+  margin-bottom: 50px;
+  /*width: 263px;*/
+}
+.service-title{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: center;
+}
+.service-section .slider-arrow-box .next{
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  width: 24px;
+  height: 46px;
+}
+/**======================
+Section About Starts
+=========================*/
+.about-section{
+  background: rgba(0, 0, 0, 0.5);
+}
+.about-section .section-title{
+  margin-bottom: 30px;
+}
+.horizontal-title-bar:after{
+  content: '';
+  height: 5px;
+  width: 97px;
+  background-color: #ffffff;
+  vertical-align: bottom;
+  display: inline-block;
+  margin-right: 17px;
+  margin-bottom: 30px;
+}
+.about-grid-container .left-grid img{
+  border: 8px solid #000000;
+  border-right: 0;
+  border-bottom: 0;
+  /*border-image: linear-gradient(to right, #000 68%, transparent 32%) 100% 1;*/
+}
+.about-grid-container .right-grid{
+  color: #ffffff;
+}
+@media(min-width: 768px) {
+  .about-section .about-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-grid-container .right-grid{
+    padding: 60px;
+  }
+  .about-grid-container .right-grid p{
+    text-align: justify;
+  }
+}
+/**======================
+Section Counter Starts
+=========================*/
+.counter-section .counter-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.counter-section .counter-row > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 17px;
+}
+.counter-section .count-number{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+}
+.counter-section p{
+  font-size: 24px;
+  line-height: 28px;
+}
+/**======================
+Section Partner Starts
+=========================*/
+.partner-section .section-title{
+  margin-bottom: 30px;
+}
+.partner-section .partner-slider .slider-box img{
+  margin: 10px 30px
+}
+@media (min-width: 768px) {
+  /*.partner-section .slick-slide {*/
+  /*  margin: 0 30px;*/
+  /*}*/
+  /*.partner-section .slick-list {*/
+  /*  margin: 0 -30px;*/
+  /*}*/
+}
