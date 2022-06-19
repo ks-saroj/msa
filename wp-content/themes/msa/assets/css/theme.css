@@ -1003,7 +1003,6 @@ footer .footer-logo {
     background-size: 16px;
     border: 1px solid #000000;
 }
-
 .project-box-container{
     display: grid;
     grid-template-columns: repeat(3, 2fr);
@@ -1031,4 +1030,25 @@ footer .footer-logo {
     line-height: 29px;
     margin-bottom: 6px;
 }
-
+/*****************************
+  Contact Page Starts
+******************************/
+.contact-grid{
+    display: grid;
+    grid-template-columns: 55% 39%;
+    justify-content: space-between;
+}
+.contact-grid .contact-topic-title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 20px;
+}
+.contact-grid .left-col .contact-details-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 90px;
+}
+.contact-grid .left-col p{
+    margin-bottom: 0;
+}
