@@ -243,12 +243,11 @@ jQuery(window).scroll(function () {
 //counter ends
 
 //on scroll add `scrolled-navbar` class
-let num = 50; //number of pixels before modifying styles
+let num = 100; //number of pixels before modifying styles
 jQuery(window).bind('scroll', function () {
 	if (jQuery(window).scrollTop() > num) {
 		jQuery('#masthead').addClass('scrolled-navbar');
+	}else{
+		jQuery('#masthead').removeClass('scrolled-navbar');
 	}
-	// else {
-	// 	jQuery('#masthead').removeClass('scrolled-navbar');
-	// }
 });
