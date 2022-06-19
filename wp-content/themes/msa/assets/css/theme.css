@@ -77,11 +77,11 @@ img.cover-image{
   object-position: center;
 }
 .ks-btn{
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-weight: 700;
   font-size: 18px;
   border-radius: 50px;
-  min-width: 230px;
+  /*min-width: 230px;*/
   line-height: 24px;
   text-decoration: none;
   white-space: nowrap;
@@ -92,7 +92,21 @@ img.cover-image{
   background: #ffffff;
   color: #000000;
 }
-
+.ks-btn-light:hover{
+  color: #000000;
+  text-decoration: none;
+}
+.ks-btn-dark{
+  background: #000000;
+  color: #ffffff;
+}
+.arrow-light:after {
+  content: url(../images/arrow-right-light.png);
+  margin-left: 15px;
+  color: #ffffff;
+  display: inline-block;
+  width: 15px;
+}
 #masthead{
   display: none;
 }
@@ -302,4 +316,196 @@ Section Partner Starts
   /*.partner-section .slick-list {*/
   /*  margin: 0 -30px;*/
   /*}*/
+}
+/**======================
+Section Portfolio Starts
+=========================*/
+.project-section{
+  position: relative;
+}
+.project-section .slick-slide {
+  margin: 0 20px;
+}
+.project-section .slick-list {
+  margin: 0 -20px;
+}
+.project-section .slider-box figure img{
+  height: 432px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.project-title{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0;
+}
+.project-section .slider-arrow-box .next{
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  width: 24px;
+  height: 46px;
+}
+/**======================
+Section Blog Starts
+=========================*/
+.blog-section{
+}
+.blog-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:30px;
+}
+.blog-grid figure{
+  text-align: center;
+}
+.blog-grid .post-title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.025em;
+}
+.blog-section .blog-box figure{
+  margin-bottom: 30px;
+}
+.blog-section .blog-box a,
+.blog-section .blog-box a:hover{
+  text-decoration: none;
+  color: #000000;
+}
+/**======================
+Section Blog Starts
+=========================*/
+.contact-with-map .contact-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+/*****************************
+    CONTACT FORM 7 CSS STARTS
+******************************/
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  /*border-radius: 10px;*/
+  /*background: #444444;*/
+  color: #000000;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  /*margin-top: 15px;*/
+  border-bottom: 1px solid #000000;
+}
+.contact-form input[type='file']{
+  /*margin-top: 33px;*/
+  padding-right: 5px;
+}
+.contact-form .ks-text-transparent{
+  color: transparent;
+}
+.contact-form .ks-text-transparent.ks-inherit-color{
+  color: inherit;
+}
+
+.contact-form input,
+.contact-form select {
+  height: 62px;
+}
+
+.contact-form button[type="submit"] {
+  float: right;
+  /*background: transparent;*/
+  margin-top: 15px;
+}
+.wpcf7 form .wpcf7-response-output {
+  margin: 1em 0.5em;
+}
+.input-placeholder {
+  position: relative;
+}
+.input-placeholder input:valid .placeholder {
+  display: none;
+}
+.input-placeholder .placeholder {
+  position: absolute;
+  pointer-events: none;
+  top: 17px;
+  font-size: 16px;
+  color: #000000;
+  line-height: 26px;
+  /*font-family: "agenda", sans-serif;*/
+  padding-left: 0;
+  padding-right: 20px;
+}
+.input-placeholder .placeholder span {
+  color: red;
+  /*margin-left: -3px;*/
+}
+.input-placeholder option {
+  padding: 5px;
+  vertical-align: middle;
+}
+.input-placeholder select {
+  background: #ffffff;
+}
+.contact-form select option {
+  background-color: rgba(0,0,0,0.1);
+}
+/*****************************
+  Footer Starts
+******************************/
+footer .footer-logo{
+  max-width: 282px;
+}
+.bottom-footer{
+  background: #000000;
+  color: #ffffff;
+}
+.top-footer-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 60px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.top-footer-grid .left-col{
+  display: flex;
+  gap: 27px;
+}
+.top-footer-grid .left-col .footer-sponsor{
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+}
+.top-footer-grid .left-col .footer-sponsor img{
+  height: 37px;
+}
+.top-footer-grid .right-col .footer-widget-title{
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.social-profile-box a{
+  color: #000000;
+}
+.social-profile-box a:hover{
+  text-decoration: none;
+}
+.bottom-footer-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.bottom-footer-grid p{
+  margin: 24px 0;
+}
+.bottom-footer-grid a{
+  color: #ffffff;
+}
+.bottom-footer-grid a:hover{
+  color: #ffffff;
+  text-decoration: none;
 }

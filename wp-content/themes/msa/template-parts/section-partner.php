@@ -1,4 +1,4 @@
-<section class="partner-section ks-sbt ks-spt">
+<section class="partner-section ks-spb ks-spt">
     <div class="container">
         <h2 class="section-title">Built on partnerships</h2>
         <p class="section-subtitle">Creating leading partnerships across government and private organisations for over 15 years.</p>

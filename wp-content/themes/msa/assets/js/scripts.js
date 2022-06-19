@@ -48,10 +48,6 @@
 	});
 	//(our service slider) starts
 
-	//parallax js
-	jQuery('.parallax-section').parallax();
-	//parallax js ends
-
 	//partner-logo slider (partnership slider) starts
 	jQuery(".partner-slider").slick({
 		speed: 5000,
@@ -94,17 +90,17 @@
 	});
 	//partner-logo slider (partnership slider) ends
 
-	//featured slider (projects slider) starts
-	jQuery('#featured-slider').slick({
+	//(project slider ends
+	jQuery(".project-slider").slick({
 		slidesToShow: 2,
 		slidesToScroll: 1,
 		arrows: true,
 		dots: false,
 		infinite: true,
 		speed: 1000,
-		autoplay: false,
-		prevArrow: $('.prev1'),
-		nextArrow: $('.next1'),
+		autoplay: true,
+		// prevArrow: jQuery('.project-section .slider-arrow-box .prev'),
+		nextArrow: jQuery('.project-section .slider-arrow-box .next'),
 		responsive: [
 			{
 				breakpoint: 991,
@@ -127,9 +123,9 @@
 					slidesToScroll: 1,
 				}
 			}
-		]
+		],
 	});
-	//featured slider (projects slider) ends
+	//project slider ends
 
 
 

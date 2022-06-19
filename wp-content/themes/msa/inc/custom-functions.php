@@ -177,4 +177,4 @@ function ks_generate_theme_option_css(){
 
 }
 
-add_action( 'wp_head', 'ks_generate_theme_option_css' );
+//add_action( 'wp_head', 'ks_generate_theme_option_css' );
