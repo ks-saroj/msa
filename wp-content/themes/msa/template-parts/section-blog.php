@@ -1,33 +1,40 @@
+<?php
+$post_id = getIdBySlug('section-blog','sections');
+$args = array(
+    'post_status' => 'publish',
+    'orderby' => 'publish_date',
+    'post_type' => 'post',
+    'order' => 'DESC',
+    'posts_per_page' => '2',
+);
+$the_query = new WP_Query($args);
+// The Loop
+if ($the_query->have_posts()) :
+?>
 <section class="blog-section ks-spb">
     <div class="container">
         <h2 class="section-title">Latest News & Industry Insights</h2>
         <div class="blog-grid">
-
+            <?php
+            while ( $the_query->have_posts() ) :
+            $the_query->the_post();
+            $custom_thumbnail = get_field('custom_thumbnail');
+            ?>
             <div class="blog-box">
                 <a href="">
                     <figure>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/article1.png"
+                        <img src="<?php echo $custom_thumbnail['url']; ?>"
                              class="img-fluid cover-image" alt="">
                     </figure>
                 </a>
                 <a href="#">
-                    <h3 class="post-title">MSA Civil giving back to the local community by sponsoring Sans Souci
-                        FC.</h3>
+                    <h3 class="post-title"><?php echo the_title(); ?></h3>
                 </a>
             </div>
-
-            <div class="blog-box">
-                <a href="">
-                    <figure>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog/article2.png"
-                             class="img-fluid cover-image" alt="">
-                    </figure>
-                </a>
-                <a href="#">
-                    <h3 class="post-title">We are a proud corporate partner of the Australasian Soccer Academy</h3>
-                </a>
-            </div>
-
+            <?php
+            endwhile;
+            ?>
         </div>
     </div>
 </section>
+<?php endif ?>

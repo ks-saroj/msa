@@ -48,9 +48,12 @@
 <!--    </section>-->
 
 <?php
-// Section Contact With Map Starts
-//    get_template_part( 'template-parts/section-sticky-form' );
-// Section Contact With Map Ends
+$post_id = getIdBySlug('section-footer','sections');
+$sponsors = CFS()->get('gallery',$post_id);
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$custom_logo = wp_get_attachment_url( $custom_logo_id );
+$head_office =  nl2br(htmlspecialchars_decode(get_option('msa_head_office')));
+$linkedin =  nl2br(htmlspecialchars_decode(get_option('msa_head_office')));
 ?>
 
 <footer class="ks-spt">
@@ -60,36 +63,37 @@
             <div class="top-footer-grid">
                 <div class="left-col">
                     <div class="footer-logo">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer-logo.png" class="img-fluid cover-image" alt="" /></a>
+                        <a href="#"><img src="<?php echo $custom_logo ?>" class="img-fluid cover-image" alt="" /></a>
                     </div>
                     <div class="footer-sponsor">
-                        <img src="http://msa.themarketingco-staging.com/wp-content/uploads/2021/10/IMS-Logo.png" class="img-fluid cover-image" alt="" />
-                        <img src="http://msa.themarketingco-staging.com/wp-content/uploads/2021/10/JASANZ-RGB-with-URL.png" class="img-fluid cover-image" alt="" />
-                        <img src="http://msa.themarketingco-staging.com/wp-content/uploads/2021/10/image035.png" class="img-fluid cover-image" alt="" />
-                        <img src="http://msa.themarketingco-staging.com/wp-content/uploads/2021/10/Untitled-2.png" class="img-fluid cover-image" alt="" />
+                        <?php foreach($sponsors as $sponsor): ?>
+                        <img src="<?php echo $sponsor['image']; ?>" class="img-fluid cover-image" alt="" />
+                        <?php endforeach ?>
                     </div>
                 </div>
                 <div class="right-col">
+                    <?php if($head_office): ?>
                     <div class="office-location">
                         <h6 class="footer-widget-title">
                             MSA Civil Head Office
                         </h6>
                         <div class="office-address">
                             <p>
-                                10 Loftus St,<br/>
-                                Arncliffe NSW 2205 <br/>
-                                (02) 9597 3879
+                                <?php echo $head_office; ?>
                             </p>
                         </div>
+                        <?php endif?>
                     </div>
+                    <?php if($linkedin): ?>
                     <div class="social-profile-box">
                         <h6 class="footer-widget-title">
                             Connect with us on:
                         </h6>
                         <div>
-                                <a href="#" target="_blank"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
+                                <a href="<?php echo $linkedin; ?>" target="_blank"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</a>
                         </div>
                     </div>
+                    <?php endif?>
                 </div>
             </div>
         </div>
