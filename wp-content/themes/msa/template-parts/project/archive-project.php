@@ -17,9 +17,11 @@ if ($the_query->have_posts()) :
         <div class="d-flex justify-content-center ks-smb filter-box">
             <label for=""></label>
             <select name="filter_by" class="form-control" id="">
-                <option value="">Filter by...</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
+                <optgroup>
+                    <option value="">Filter by...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                </optgroup>
             </select>
         </div>
 
