@@ -1,4 +1,4 @@
-<section class="emergency-section ks-smb" >
+<section class="emergency-section ks-smb ks-smt" >
     <div class="background-overlay"></div>
     <div class="container h-100">
         <div class="emergency-text-container">

@@ -17,11 +17,11 @@ get_header();
         //  Section Hero End
 
         // Archive Service Starts
-        get_template_part( 'template-parts/service/archive', 'service' );
+        get_template_part( 'template-parts/service/archive-service' );
         // Archive Service Starts
 
         // Section Partner Starts
-        get_template_part( 'template-parts/section', 'partner' );
+//        get_template_part( 'template-parts/section', 'partner' );
         // Section Partner Ends
 
         ?>
