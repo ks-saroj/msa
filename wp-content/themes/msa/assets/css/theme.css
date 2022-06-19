@@ -833,6 +833,128 @@ footer .footer-logo {
 }
 
 /*****************************
+  About Inner Content Starts
+******************************/
+
+    .about-content:not(:first-child){
+        padding-top: 60px;
+    }
+
+    .about-content{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 60px;
+        row-gap: 30px;
+    }
+
+    .about-content.reverse{
+        flex-direction: row-reverse;
+    }
+
+    .about-content--text{
+        text-align: justify;
+        flex: 1;
+    }
+
+    .about-content--image{
+        flex: 1;
+    }
+
+    .about-content--text p{
+        margin-bottom: 30px;
+        line-height: 26px;
+    }
+
+    .about-content--text p:last-child{
+        margin-bottom: 0;
+    }
+
+    .about-content--image img{
+        height: 100%;
+        width: 100%;
+    }
+
+/*****************************
+  About Inner mission Starts
+******************************/
+.mission-flex
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    column-gap: 60px;
+    row-gap: 30px;
+}
+
+.mission-flex--item{
+    flex: 1;
+
+}
+
+.mission--text p{
+   margin-bottom: 30px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.mission--text p:last-child{
+    margin-bottom: 0;
+}
+
+.mission-image img{
+    height: 100%;
+    width: 100%;
+}
+
+/*****************************
+  About Inner value Starts
+******************************/
+.value-section{
+    padding-top: 60px;
+}
+.value-flex
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    column-gap: 60px;
+    row-gap: 30px;
+}
+
+.value-flex--item{
+    flex: 1;
+
+}
+
+.value--text p{
+    margin-bottom: 30px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.value--text p:last-child{
+    margin-bottom: 0;
+}
+
+.value-image img{
+    height: 100%;
+    width: 100%;
+}
+
+/*****************************
+  About slogan Starts
+******************************/
+.slogan-section--title.section-title{
+    margin-bottom: 30px;
+}
+.slogan-section--subtitle{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: right;
+}
+
+/*****************************
   Archive Service Starts
 ******************************/
 .service-box-container{
@@ -909,3 +1031,4 @@ footer .footer-logo {
     line-height: 29px;
     margin-bottom: 6px;
 }
+
