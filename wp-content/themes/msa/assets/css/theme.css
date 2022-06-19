@@ -48,6 +48,9 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
+.ks-smt {
+    margin-top: 100px;
+}
 .ks-smb {
     margin-bottom: 100px;
 }
@@ -155,7 +158,7 @@ header {
     right: 0;
 }
 
-.home header#masthead.scrolled-navbar {
+header#masthead.scrolled-navbar {
     background: #ffffff;
     /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -367,11 +370,10 @@ Hero Section Starts
 =========================*/
 .hero-section {
     position: relative;
-    padding: 200px 0;
-    background: url(../images/circle1.png) left bottom no-repeat, #c3e5e1;
-    background-size: 249px;
-    z-index: 1;
-    margin-bottom: 100px;
+    background-size: cover;
+    /*margin-bottom: 100px;*/
+    background-repeat: no-repeat;
+    height: 550px;
 }
 
 .single-post .hero-section,
@@ -382,35 +384,46 @@ Hero Section Starts
 #front-page .hero-section {
     background: none;
     padding: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #front-page .hero-section::before {
     background: none !important;
 }
 
-#front-page #hero-section-overlay {
+#hero-section-overlay {
     background-color: rgba(0, 0, 0, 0.25);
     position: absolute;
+    top:0;
+    left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
     z-index: 2;
 }
 
-#front-page .hero-section .hero-section-text {
+.hero-section .hero-section-text {
     position: absolute;
-    top: 30%;
+    top: 50%;
     width: 100%;
     left: 0;
     z-index: 3;
     color: #ffffff;
     text-align: left;
 }
+#front-page .hero-section .hero-section-text{
+    top: 45%;
+}
 
-.hero-section-title {
+ .hero-section-title {
     font-family: "Merriweather", serif;
     font-style: italic;
     font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+#front-page .hero-section .hero-section-title {
     font-size: 58px;
     line-height: 65px;
 }
@@ -819,7 +832,6 @@ footer .footer-logo {
     text-decoration: none;
 }
 
-
 /*****************************
   About Inner Content Starts
 ******************************/
@@ -863,11 +875,6 @@ footer .footer-logo {
     }
 
 /*****************************
-  About Inner Content Ends
-******************************/
-
-
-/*****************************
   About Inner mission Starts
 ******************************/
 .mission-flex
@@ -898,13 +905,6 @@ footer .footer-logo {
     height: 100%;
     width: 100%;
 }
-
-
-/*****************************
-  About Inner mission Ends
-******************************/
-
-
 
 /*****************************
   About Inner value Starts
@@ -941,11 +941,6 @@ footer .footer-logo {
     width: 100%;
 }
 
-
-/*****************************
-  About Inner value Ends
-******************************/
-
 /*****************************
   About slogan Starts
 ******************************/
@@ -958,7 +953,79 @@ footer .footer-logo {
     line-height: 26px;
     text-align: right;
 }
+
 /*****************************
-  About slogan Ends
+  Archive Service Starts
 ******************************/
+.service-box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+}
+.service-box-container .service-box figure{
+    margin-bottom: 44px;
+}
+.service-box-container .service-box figure img{
+    height: 460px;
+    border-radius: 20px;
+}
+.service-box a{
+    color: #000000;
+}
+.service-box a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+.service-box .post-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 15px;
+}
+/*****************************
+  Archive Project Starts
+******************************/
+.filter-box select{
+    width: 504px;
+    max-width: 100%;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 10px 26px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #000000;
+    background-image: url("../../assets/images/angle-down.png");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+}
+.project-box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+}
+.project-box-container .project-box figure img{
+    height: 427px;
+}
+.project-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+.project-box a{
+    color: #000000;
+}
+.project-box a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+.project-box .post-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 6px;
+}
 

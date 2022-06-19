@@ -11,34 +11,38 @@ $the_query = new WP_Query($args);
 // The Loop
 if ($the_query->have_posts()) :
 ?>
-<section class="completed-project">
+<section class="archive-project ks-spt ks-spb ks-smb" data-parallax="scroll"
+         data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/archive-project.png">
     <div class="container">
-        <div class="row">
-    <?php
-    while ( $the_query->have_posts() ) :
-        $the_query->the_post();
-        $custom_thumbnail = get_field('custom_thumbnail');
-        ?>
-            <div class="col-md-4 col-sm-6 col-12">
-                <div class="boxes">
-                    <div class="image-box" data-aos="fade-up" data-aos-duration="800">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="img-overlay">
-                                <div class="overlay-text"><?php the_excerpt(); ?></div>
-                            </div>
-                            <img
-                                src="<?php echo $custom_thumbnail['url']; ?>"
-                                class="img-fluid cover-image"
-                                alt="<?php echo $custom_thumbnail['alt']; ?>"
-                            />
-                        </a>
-                    </div>
-                    <h4><a class="primary-link-color text-decoration-none" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+        <div class="d-flex justify-content-center ks-smb filter-box">
+            <label for=""></label>
+            <select name="filter_by" class="form-control" id="">
+                <option value="">Filter by...</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+            </select>
+        </div>
+
+        <div class="project-box-container">
+            <?php
+            while ($the_query->have_posts()) :
+                $the_query->the_post();
+                $custom_thumbnail = get_field('custom_thumbnail');
+                ?>
+                <div class="project-box">
+                    <a href="<?php the_permalink(); ?>">
+                        <figure class="mb-0">
+                            <img src="<?php echo $custom_thumbnail['url'] ?>" class="img-fluid cover-image w-100" alt="">
+                        </figure>
+                    </a>
+                    <a href="<?php the_permalink(); ?>">
+                        <h2 class="post-title mb-0"><?php the_title(); ?></h2>
+                    </a>
                 </div>
-            </div>
-        <?php
-        endwhile;
-        ?>
+
+            <?php
+            endwhile;
+            ?>
         </div>
     </div>
 </section>
