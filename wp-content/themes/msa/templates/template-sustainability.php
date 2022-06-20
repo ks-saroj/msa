@@ -15,7 +15,7 @@ $post_title = get_field('title', $post_id);
 $post_body = get_field('body', $post_id);
 $image = get_field('image', $post_id);
 ?>
-    <main id="page-sustainability" class="site-main">
+    <main id="page-sustainablility" class="site-main">
         <?php
             //  Section Hero Start
             get_template_part( 'template-parts/section', 'hero' );
