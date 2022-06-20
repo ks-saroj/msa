@@ -31,7 +31,7 @@ $project_gallery = CFS()->get('gallery');
                                 foreach ($project_gallery as $item):
                                     ?>
                             <figure class="mb-0 project-slider--image-container">
-                                <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['image']; ?>"
+                                <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['caption']; ?>"
                                      class="img-fluid cover-image">
                             </figure>
                             <?php
