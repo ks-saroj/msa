@@ -51,52 +51,48 @@ $author = get_field('author', $post_id);
         //  Section Intro End
 
         ?>
-<!--        Section mission start       -->
-        <section class="mission-section ks-spt">
+<!--        Section objective start       -->
+        <section class="objective-section ks-spt">
             <div class="container">
-                <h2 class="section-title">Our Mission</h2>
-                <div class="mission-flex">
-                    <div class="mission-flex--item">
-                        <div class="mission--text">
-                            <p>MSA Civil and Communications endeavours to deliver high-quality projects with meticulous management, on schedule. We accomplish this by never compromising on our values and continuing to put our clients at the fore and relentlessly pursuing innovation in building techniques.</p>
+                <div class="single-objective">
+                    <h2 class="section-title">Our Mission</h2>
+                    <div class="objective-flex">
+                        <div class="objective-flex--item">
+                            <div class="objective--text">
+                                <p>MSA Civil and Communications endeavours to deliver high-quality projects with meticulous management, on schedule. We accomplish this by never compromising on our values and continuing to put our clients at the fore and relentlessly pursuing innovation in building techniques.</p>
 
-                            <p>Our clients trust our transparency, integrity and reliability. We value our relationships so are never complacent in our reputation and strive to become a significant name in the Australian major market. That is our mission.</p>
-
+                                <p>Our clients trust our transparency, integrity and reliability. We value our relationships so are never complacent in our reputation and strive to become a significant name in the Australian major market. That is our mission.</p>
+                            </div>
                         </div>
+                        <figure class="objective-flex--item objective-image mb-0">
+                            <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/mission.png" alt="mission">
+                        </figure>
                     </div>
-                    <figure class="mission-flex--item mission-image mb-0">
-                        <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/mission.png" alt="mission">
-                    </figure>
                 </div>
-            </div>
-        </section>
-<!--        Section mission End         -->
-
-    <!--        Section value start       -->
-        <section class="value-section">
-            <div class="container">
-                <h2 class="section-title">Our Value</h2>
-                <div class="value-flex">
-                    <figure class="value-flex--item value-image mb-0">
-                        <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/value.png" alt="value">
-                    </figure>
-                    <div class="value-flex--item">
-                        <div class="value--text">
-                            <p>
-                                We recognise the lasting and permanent presence of our work activities and strive to protect the environment by upholding effective and efficient environmental and sustainable practices as part of everyday business. Our employees are our greatest asset.
-                            </p>
-                            <p>
-                                Great teamwork allows White Construction to benefit from the combined strength of our individual talents, skills and expertise which are vital when tackling challenging construction projects. We measure, monitor, analyse and improve productivity, processes, tasks and ourselves to satisfy clients and our own high expectations.
-                            </p>
-                            <p>
-                                We work with enthusiasm, courtesy and intellect, and are driven to surpass what has already been achieved. We are not afraid to stand alone, especially when it is the right thing to do.
-                            </p>
+                <div class="single-objective">
+                    <h2 class="section-title">Our Value</h2>
+                    <div class="objective-flex reverse">
+                        <div class="objective-flex--item">
+                            <div class="objective--text">
+                                <p>
+                                    We recognise the lasting and permanent presence of our work activities and strive to protect the environment by upholding effective and efficient environmental and sustainable practices as part of everyday business. Our employees are our greatest asset.
+                                </p>
+                                <p>
+                                    Great teamwork allows White Construction to benefit from the combined strength of our individual talents, skills and expertise which are vital when tackling challenging construction projects. We measure, monitor, analyse and improve productivity, processes, tasks and ourselves to satisfy clients and our own high expectations.
+                                </p>
+                                <p>
+                                    We work with enthusiasm, courtesy and intellect, and are driven to surpass what has already been achieved. We are not afraid to stand alone, especially when it is the right thing to do.
+                                </p>
+                            </div>
                         </div>
+                        <figure class="objective-flex--item objective-image mb-0">
+                            <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/value.png" alt="mission">
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
-        <!--        Section value End         -->
+<!--        Section objective End         -->
 
         <!--        Section slogan start       -->
         <section class="slogan-section ks-spt">

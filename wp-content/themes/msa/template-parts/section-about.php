@@ -1,4 +1,3 @@
-
 <section class="about-section ks-spb ks-spt">
     <div class="container">
         <div class="about-grid-container">

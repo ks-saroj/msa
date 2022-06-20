@@ -960,9 +960,12 @@ footer .footer-logo {
 }
 
 /*****************************
-  About Inner mission Starts
+  About Inner Objective Starts
 ******************************/
-.mission-flex {
+.objective-section .single-objective:not(:first-child) h2{
+    margin-top: 60px;
+}
+.objective-flex {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -970,60 +973,30 @@ footer .footer-logo {
     row-gap: 30px;
 }
 
-.mission-flex--item {
+.objective-flex.reverse{
+    flex-direction: row-reverse;
+}
+
+.objective-flex--item {
     flex: 1;
 
 }
 
-.mission--text p {
+.objective--text p {
     margin-bottom: 30px;
     line-height: 26px;
     text-align: justify;
 }
 
-.mission--text p:last-child {
+.objective--text p:last-child {
     margin-bottom: 0;
 }
 
-.mission-image img {
+.objective-image img {
     height: 100%;
     width: 100%;
 }
 
-/*****************************
-  About Inner value Starts
-******************************/
-.value-section {
-    padding-top: 60px;
-}
-
-.value-flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    column-gap: 60px;
-    row-gap: 30px;
-}
-
-.value-flex--item {
-    flex: 1;
-
-}
-
-.value--text p {
-    margin-bottom: 30px;
-    line-height: 26px;
-    text-align: justify;
-}
-
-.value--text p:last-child {
-    margin-bottom: 0;
-}
-
-.value-image img {
-    height: 100%;
-    width: 100%;
-}
 
 /*****************************
   About slogan Starts
@@ -1270,12 +1243,17 @@ footer .footer-logo {
     top: 50%;
     transform: translateY(-50%);
 }
+.arrows.left.prev3 img,
+.arrows.right.next3 img
+{
+    height: 46px;
+}
 .arrows.left.prev3{
-    left: 0;
+    left: -100px;
 
 }
 .arrows.right.next3{
-    right: 0;
+    right: -100px;
 }
 .project-slider--image-container {
     max-height: 515px;
