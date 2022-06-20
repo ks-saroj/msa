@@ -1,6 +1,10 @@
 <?php
 
 get_header();
+$overview = get_field('overview');
+$scope_of_works = get_field('scope');
+$client = get_field('client');
+$project_gallery = CFS()->get('gallery');
 ?>
     <main id="single-projects" class="site-main">
         <?php
@@ -21,16 +25,20 @@ get_header();
                 <div class="project-slider--container">
                     <div class="arrows left prev3"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/angle-left.png" class="img-fluid" alt=""/></div>
                     <div class="arrows right next3"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/angle-right.png" class="img-fluid" alt=""/></div>
-                    <div id="project-slider">
-                        <figure class="mb-0 project-slider--image-container">
-                            <img src="<?php echo get_template_directory_uri()?>/assets/images/slider/slider.png" alt="featured image"
-                                 class="img-fluid cover-image">
-                        </figure>
-                        <figure class="mb-0 project-slider--image-container">
-                            <img src="<?php echo get_template_directory_uri()?>/assets/images/slider/n1.png" alt="featured image"
-                                 class="img-fluid cover-image">
-                        </figure>
-                    </div>
+                        <div id="project-slider">
+                            <?php
+                            if($project_gallery):
+                                foreach ($project_gallery as $item):
+                                    ?>
+                            <figure class="mb-0 project-slider--image-container">
+                                <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['image']; ?>"
+                                     class="img-fluid cover-image">
+                            </figure>
+                            <?php
+                            endforeach;
+                        endif;
+                        ?>
+                        </div>
                 </div>
                 <div class="project-content-flex">
                     <div class="single-project--flex-item">
@@ -38,18 +46,14 @@ get_header();
                             OverView:
                         </h2>
                         <p class="single-project--text">
-                            MSA Civil has delivered the Pedestrian Crossing at St Felix Primary School, Bankstown on behalf of the City of Canterbury Council.
-                        </p>
+                            <?php echo nl2br(htmlspecialchars_decode($overview)); ?>                        </p>
                     </div>
                     <div class="single-project--flex-item">
                         <h2 class="single-project--subtitle">
                             Scope of Works
                         </h2>
                         <p class="single-project--text">
-                            Demolition and installation of concrete K&G, Footpaths, Kerb ramps and Driveways.
-                            Installation of concrete Threshold
-                            Of installation Asphalt Road re-sheet
-                            Installation of Signage and Line marking
+                            <?php echo htmlspecialchars_decode($scope_of_works); ?>
                         </p>
                     </div>
                     <div class="single-project--flex-item">
@@ -57,7 +61,7 @@ get_header();
                            Client:
                         </h2>
                         <figure class="mb-0">
-                            <img src="<?php echo get_template_directory_uri()?>/assets/images/prooject_inner.png" alt="image"
+                            <img src="<?php echo $client['url']; ?>" alt="<?php echo $client['alt']; ?>"
                             class="img-fluid cover-image">
                         </figure>
 
