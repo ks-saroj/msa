@@ -17,7 +17,7 @@ get_header();
         //  Section Hero End
 
         ?>
-        <section class="career-section ks-spt">
+        <section class="career-section ks-spt ks-spb">
             <div class="container">
                 <div class="career-flex">
                     <div class="career--flex-item">

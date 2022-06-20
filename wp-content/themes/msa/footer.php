@@ -55,7 +55,7 @@ $head_office =  nl2br(htmlspecialchars_decode(get_option('msa_head_office')));
 $linkedin =  nl2br(htmlspecialchars_decode(get_option('msa_head_office')));
 ?>
 
-<footer class="ks-spt">
+<footer>
     <div class="top-footer">
         <div class="container">
             <div class="top-footer-grid">
