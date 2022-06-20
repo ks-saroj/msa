@@ -5,10 +5,11 @@ $counters = CFS()->get('counter',$post_id);
 <section class="counter-section ks-spt">
     <div class="container">
         <div class="counter-row">
-            <?php foreach($counters as $counter): ?>
+            <?php foreach($counters as $counter):
+                ?>
             <div>
                 <figure>
-                    <img src="<?php echo $counter['icon']; ?>" alt="">
+                    <img src="<?php echo $counter['icon']; ?>" class="img-fluid cover-image" alt="<?php echo $counter['count_description']; ?>">
                 </figure>
                 <span class="count-number"><?php echo $counter['count_value']; ?></span>
                 <p>

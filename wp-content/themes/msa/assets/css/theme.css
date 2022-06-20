@@ -51,6 +51,7 @@ body {
 .ks-smt {
     margin-top: 100px;
 }
+
 .ks-smb {
     margin-bottom: 100px;
 }
@@ -132,7 +133,7 @@ img.cover-image {
 }
 
 .section-title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 44px;
     text-align: left;
@@ -143,6 +144,12 @@ img.cover-image {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 36px;
+    }
 }
 
 /**======================
@@ -268,9 +275,11 @@ body.admin-bar header {
     font-size: 25px;
     text-align: center;
 }
+
 .device-nav span.icon.fa-times {
     color: #ffffff;
 }
+
 /*@media (max-width: 1400px) {*/
 /*    header {*/
 /*        padding: 20px 100px;*/
@@ -286,19 +295,24 @@ body.admin-bar header {
     header {
         padding: 10px 0;
     }
+
     header .top-action-btn {
         position: relative;
         padding-right: 30px;
     }
-    #masthead.site-header{
+
+    #masthead.site-header {
         background: #ffffff;
     }
+
     #masthead.scrolled-navbar .navigation nav ul li a {
         color: #ffffff;
     }
+
     .device-nav {
         display: block;
     }
+
     .navigation nav {
         -o-transform: translate(100%);
         -o-transform-origin: 0 0;
@@ -395,7 +409,7 @@ Hero Section Starts
 #hero-section-overlay {
     background-color: rgba(0, 0, 0, 0.25);
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -412,17 +426,19 @@ Hero Section Starts
     color: #ffffff;
     text-align: left;
 }
-#front-page .hero-section .hero-section-text{
+
+#front-page .hero-section .hero-section-text {
     top: 45%;
 }
 
- .hero-section-title {
+.hero-section-title {
     font-family: "Merriweather", serif;
     font-style: italic;
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
 }
+
 #front-page .hero-section .hero-section-title {
     font-size: 58px;
     line-height: 65px;
@@ -484,10 +500,14 @@ Section Service Starts
     margin: 0 -20px;
 }
 
+/*.service-section .slider-box figure{*/
+/*    !*height: 336px;*!*/
+/*}*/
 .service-section .slider-box figure img {
-    height: 336px;
+    height: 435px;
     margin-bottom: 50px;
     /*width: 263px;*/
+    width: 100%;
 }
 
 .service-title {
@@ -498,12 +518,28 @@ Section Service Starts
     text-align: center;
 }
 
+.service-section .slider-arrow-box {
+    display: none;
+}
+
 .service-section .slider-arrow-box .next {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 60px;
     width: 24px;
     height: 46px;
+}
+
+@media (min-width: 992px) {
+    .service-section .slider-box figure img {
+        height: 336px;
+    }
+}
+
+@media (min-width: 768px) {
+    .service-section .slider-arrow-box {
+        display: inline-block;
+    }
 }
 
 /**======================
@@ -528,6 +564,12 @@ Section About Starts
     margin-bottom: 30px;
 }
 
+.about-grid-container .left-grid {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
 .about-grid-container .left-grid img {
     border: 8px solid #000000;
     border-right: 0;
@@ -537,6 +579,7 @@ Section About Starts
 
 .about-grid-container .right-grid {
     color: #ffffff;
+    padding-top: 30px;
 }
 
 @media (min-width: 768px) {
@@ -559,6 +602,7 @@ Section Counter Starts
 =========================*/
 .counter-section .counter-row {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 30px;
 }
@@ -577,9 +621,20 @@ Section Counter Starts
     line-height: 59px;
 }
 
+.counter-section figure img {
+    width: 69px;
+    height: 69px;
+}
+
 .counter-section p {
     font-size: 24px;
     line-height: 28px;
+}
+
+@media (min-width: 768px) {
+    .counter-section .counter-row {
+        flex-direction: row;
+    }
 }
 
 /**======================
@@ -629,24 +684,27 @@ Section Portfolio Starts
     line-height: 29px;
     letter-spacing: 0;
 }
-
+.project-section .slider-arrow-box {
+    display: none;
+}
 .project-section .slider-arrow-box .next {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 60px;
     width: 24px;
     height: 46px;
+}
+@media (min-width: 768px) {
+    .project-section .slider-arrow-box {
+        display: inline-block;
+    }
 }
 
 /**======================
 Section Blog Starts
 =========================*/
-.blog-section {
-}
-
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -670,14 +728,23 @@ Section Blog Starts
     text-decoration: none;
     color: #000000;
 }
+@media (min-width: 768px) {
+    .blog-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 /**======================
-Section Blog Starts
+Contact with Map Starts
 =========================*/
 .contact-with-map .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 60px;
+}
+@media (min-width: 840px) {
+    .contact-with-map .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /*****************************
@@ -776,21 +843,21 @@ footer .footer-logo {
 
 .top-footer-grid {
     display: grid;
-    grid-template-columns: auto auto;
     gap: 60px;
     align-items: flex-end;
-    justify-content: space-between;
 }
 
 .top-footer-grid .left-col {
     display: flex;
+    flex-direction: column;
     gap: 27px;
 }
 
 .top-footer-grid .left-col .footer-sponsor {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: end;
+    gap: 10px;
 }
 
 .top-footer-grid .left-col .footer-sponsor img {
@@ -814,7 +881,6 @@ footer .footer-logo {
 
 .bottom-footer-grid {
     display: grid;
-    grid-template-columns: auto auto;
     justify-content: space-between;
     margin-top: 50px;
 }
@@ -831,56 +897,73 @@ footer .footer-logo {
     color: #ffffff;
     text-decoration: none;
 }
+@media (min-width: 768px) {
+    .top-footer-grid {
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+    .top-footer-grid .left-col {
+        flex-direction: row;
+    }
+    .top-footer-grid .left-col .footer-sponsor {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 1024px) {
+    .bottom-footer-grid {
+        grid-template-columns: auto auto;
+    }
+}
 
 /*****************************
   About Inner Content Starts
 ******************************/
-    #page-about .partner-section{
-        padding-bottom: 0;
-    }
-    .about-content:not(:first-child){
-        padding-top: 60px;
-    }
+#page-about .partner-section {
+    padding-bottom: 0;
+}
 
-    .about-content{
-        display: flex;
-        justify-content: space-between;
-        column-gap: 60px;
-        row-gap: 30px;
-    }
+.about-content:not(:first-child) {
+    padding-top: 60px;
+}
 
-    .about-content.reverse{
-        flex-direction: row-reverse;
-    }
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+    row-gap: 30px;
+}
 
-    .about-content--text{
-        text-align: justify;
-        flex: 1;
-    }
+.about-content.reverse {
+    flex-direction: row-reverse;
+}
 
-    .about-content--image{
-        flex: 1;
-    }
+.about-content--text {
+    text-align: justify;
+    flex: 1;
+}
 
-    .about-content--text p{
-        margin-bottom: 30px;
-        line-height: 26px;
-    }
+.about-content--image {
+    flex: 1;
+}
 
-    .about-content--text p:last-child{
-        margin-bottom: 0;
-    }
+.about-content--text p {
+    margin-bottom: 30px;
+    line-height: 26px;
+}
 
-    .about-content--image img{
-        height: 100%;
-        width: 100%;
-    }
+.about-content--text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-content--image img {
+    height: 100%;
+    width: 100%;
+}
 
 /*****************************
   About Inner mission Starts
 ******************************/
-.mission-flex
-{
+.mission-flex {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -888,22 +971,22 @@ footer .footer-logo {
     row-gap: 30px;
 }
 
-.mission-flex--item{
+.mission-flex--item {
     flex: 1;
 
 }
 
-.mission--text p{
-   margin-bottom: 30px;
+.mission--text p {
+    margin-bottom: 30px;
     line-height: 26px;
     text-align: justify;
 }
 
-.mission--text p:last-child{
+.mission--text p:last-child {
     margin-bottom: 0;
 }
 
-.mission-image img{
+.mission-image img {
     height: 100%;
     width: 100%;
 }
@@ -911,11 +994,11 @@ footer .footer-logo {
 /*****************************
   About Inner value Starts
 ******************************/
-.value-section{
+.value-section {
     padding-top: 60px;
 }
-.value-flex
-{
+
+.value-flex {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -923,22 +1006,22 @@ footer .footer-logo {
     row-gap: 30px;
 }
 
-.value-flex--item{
+.value-flex--item {
     flex: 1;
 
 }
 
-.value--text p{
+.value--text p {
     margin-bottom: 30px;
     line-height: 26px;
     text-align: justify;
 }
 
-.value--text p:last-child{
+.value--text p:last-child {
     margin-bottom: 0;
 }
 
-.value-image img{
+.value-image img {
     height: 100%;
     width: 100%;
 }
@@ -946,10 +1029,11 @@ footer .footer-logo {
 /*****************************
   About slogan Starts
 ******************************/
-.slogan-section--title.section-title{
+.slogan-section--title.section-title {
     margin-bottom: 30px;
 }
-.slogan-section--subtitle{
+
+.slogan-section--subtitle {
     font-size: 24px;
     font-weight: 700;
     line-height: 26px;
@@ -959,35 +1043,41 @@ footer .footer-logo {
 /*****************************
   Archive Service Starts
 ******************************/
-.service-box-container{
+.service-box-container {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 30px;
 }
-.service-box-container .service-box figure{
+
+.service-box-container .service-box figure {
     margin-bottom: 44px;
 }
-.service-box-container .service-box figure img{
+
+.service-box-container .service-box figure img {
     height: 460px;
     border-radius: 20px;
 }
-.service-box a{
+
+.service-box a {
     color: #000000;
 }
-.service-box a:hover{
+
+.service-box a:hover {
     color: #000000;
     text-decoration: none;
 }
-.service-box .post-title{
+
+.service-box .post-title {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 15px;
 }
+
 /*****************************
   Archive Project Starts
 ******************************/
-.filter-box select{
+.filter-box select {
     width: 504px;
     max-width: 100%;
     border-radius: 50px;
@@ -1005,142 +1095,162 @@ footer .footer-logo {
     background-size: 16px;
     border: 1px solid #000000;
 }
-.project-box-container{
+
+.project-box-container {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 30px;
 }
-.project-box-container .project-box figure img{
+
+.project-box-container .project-box figure img {
     height: 427px;
 }
-.project-box{
+
+.project-box {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 30px;
 }
-.project-box a{
+
+.project-box a {
     color: #000000;
 }
-.project-box a:hover{
+
+.project-box a:hover {
     color: #000000;
     text-decoration: none;
 }
-.project-box .post-title{
+
+.project-box .post-title {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 6px;
 }
+
 /*****************************
   Content Service Starts
 ******************************/
-.featured-service--flex{
+.featured-service--flex {
     display: flex;
     column-gap: 60px;
     align-items: center;
 }
 
-.featured-service--text{
+.featured-service--text {
     line-height: 26px;
     text-align: justify;
     margin-bottom: 145px;
 }
 
-.featured-service--title{
+.featured-service--title {
     margin-bottom: 35px;
     font-size: 32px;
 }
 
-.featured-section--image{
+.featured-section--image {
     margin-bottom: 30px;
 }
 
-.featured-service--subtitle{
+.featured-service--subtitle {
     font-size: 24px;
     font-weight: 700;
     line-height: 26px;
     margin-bottom: 0;
 }
+
 /*****************************
   Sustainability Starts
 ******************************/
 .sustainability--top-flex,
-.sustainability--bottom-flex{
+.sustainability--bottom-flex {
     display: flex;
     column-gap: 67px;
     justify-content: space-between;
 }
-.sustainability--top-flex{
+
+.sustainability--top-flex {
     margin-bottom: 60px;
 }
+
 .sustainability--top-flex-item,
-.sustainability--bottom-flex-item{
+.sustainability--bottom-flex-item {
     flex: 1;
 }
-.sustainability--title{
+
+.sustainability--title {
     margin-bottom: 30px;
 }
 
-.sustainability--subtitle{
+.sustainability--subtitle {
     line-height: 26px;
     text-align: justify;
     margin-bottom: 0;
 }
-.sustainability--bottom-flex-item > div:not(:last-child){
+
+.sustainability--bottom-flex-item > div:not(:last-child) {
     margin-bottom: 60px;
 }
+
 /*****************************
   Career Starts
 ******************************/
-.career-section{
+.career-section {
     margin-top: 20px;
 }
-.career-flex{
+
+.career-flex {
     display: flex;
     justify-content: space-between;
     gap: 60px;
 }
-.career--flex-item{
+
+.career--flex-item {
     flex: 1;
 }
+
 .career--image,
-.career--image img{
+.career--image img {
     height: 100%;
     width: 100%;
 }
 
-.career--text{
+.career--text {
     line-height: 26px;
     text-align: justify;
 }
-.career--text p{
+
+.career--text p {
     margin-bottom: 40px;
 }
 
-.career--text p:last-child{
+.career--text p:last-child {
     margin-bottom: 0;
 }
 
 /*****************************
   Contact Page Starts
 ******************************/
-.contact-grid{
+.contact-page .contact-grid {
     display: grid;
     grid-template-columns: 55% 39%;
     justify-content: space-between;
 }
-.contact-grid .contact-topic-title{
+
+.contact-page .contact-grid .contact-topic-title {
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
     margin-bottom: 20px;
 }
-.contact-grid .left-col .contact-details-box{
+
+.contact-page .contact-grid .left-col .contact-details-box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 90px;
 }
-.contact-grid .left-col p{
+
+.contact-page .contact-grid .left-col p {
     margin-bottom: 0;
 }
