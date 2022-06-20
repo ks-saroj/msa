@@ -22,7 +22,7 @@ get_header();
         //  Section Intro End
         ?>
 <!--        Section about content Start-->
-        <section class="section-about-content">
+        <section class="section-about-content ks-spt">
             <div class="container">
                 <h2 class="section-title">About MSA Civil and Communications</h2>
                 <article>

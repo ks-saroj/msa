@@ -15,7 +15,7 @@ get_header();
             get_template_part( 'template-parts/section', 'hero' );
             //  Section Hero End
         ?>
-        <div class="sustainability-section ks-spt ks-spb">
+        <div class="sustainability-section ks-spt">
             <div class="container">
                 <div class="sustainability--top-flex">
                     <div class="sustainability--top-flex-item">
