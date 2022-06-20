@@ -17,7 +17,7 @@ get_header();
         //  Section Hero End
 
         // Section Contact Starts
-        get_template_part( 'template-parts/section', 'contact' );
+        get_template_part( 'template-parts/section-contact' );
         // Section Contact Starts
         ?>
     </main>
