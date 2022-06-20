@@ -20,8 +20,7 @@ $featured_projects = get_field('featured_project');
                 <div class="featured-service--flex">
                     <div class="featured-service--item">
                         <p class="featured-service--text">
-                            MSA understands the importance of this item as it is the most comprehensive type of road project that the Council undertakes. MSA provides full services in completing these works from the demolition stage to concrete installation and handover.
-                        </p>
+                            <?php the_content(); ?>      </p>
                         <button class="ks-btn ks-btn-dark">
                             <span class="arrow-light"> Start A Project With Us</span>
                         </button>
