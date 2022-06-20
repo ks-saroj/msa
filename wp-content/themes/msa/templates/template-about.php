@@ -11,6 +11,7 @@ get_header();
 $post_id = getIdBySlug('about-us', 'page');
 $partner_gallery = CFS()->get('about_meta', $post_id);
 $title = CFS()->get('title', $post_id);
+$about_us_posts = CFS()->get('about_posts', $post_id);
 $about_contents = CFS()->get('content', $post_id);
 $slogan = get_field('slogan', $post_id);
 $author = get_field('author', $post_id);
@@ -54,42 +55,21 @@ $author = get_field('author', $post_id);
 <!--        Section objective start       -->
         <section class="objective-section ks-spt">
             <div class="container">
+                <?php foreach($about_us_posts as $k => $post): ?>
                 <div class="single-objective">
-                    <h2 class="section-title">Our Mission</h2>
-                    <div class="objective-flex">
+                    <h2 class="section-title"> <?php echo $post['title'] ?></h2>
+                    <div class="objective-flex <?php echo $k%2 ==0?'reverse':''?> ">
                         <div class="objective-flex--item">
                             <div class="objective--text">
-                                <p>MSA Civil and Communications endeavours to deliver high-quality projects with meticulous management, on schedule. We accomplish this by never compromising on our values and continuing to put our clients at the fore and relentlessly pursuing innovation in building techniques.</p>
-
-                                <p>Our clients trust our transparency, integrity and reliability. We value our relationships so are never complacent in our reputation and strive to become a significant name in the Australian major market. That is our mission.</p>
-                            </div>
+                        <?php echo $post['body'] ?>
+                           </div>
                         </div>
                         <figure class="objective-flex--item objective--image-container mb-0">
-                            <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/mission.png" alt="mission">
+                            <img class="img-fluid cover-image" src="   <?php echo $post['image'] ?>" alt="mission">
                         </figure>
                     </div>
                 </div>
-                <div class="single-objective">
-                    <h2 class="section-title">Our Value</h2>
-                    <div class="objective-flex reverse">
-                        <div class="objective-flex--item">
-                            <div class="objective--text">
-                                <p>
-                                    We recognise the lasting and permanent presence of our work activities and strive to protect the environment by upholding effective and efficient environmental and sustainable practices as part of everyday business. Our employees are our greatest asset.
-                                </p>
-                                <p>
-                                    Great teamwork allows White Construction to benefit from the combined strength of our individual talents, skills and expertise which are vital when tackling challenging construction projects. We measure, monitor, analyse and improve productivity, processes, tasks and ourselves to satisfy clients and our own high expectations.
-                                </p>
-                                <p>
-                                    We work with enthusiasm, courtesy and intellect, and are driven to surpass what has already been achieved. We are not afraid to stand alone, especially when it is the right thing to do.
-                                </p>
-                            </div>
-                        </div>
-                        <figure class="objective-flex--item objective--image-container mb-0">
-                            <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/value.png" alt="mission">
-                        </figure>
-                    </div>
-                </div>
+               <?php endforeach ?>
             </div>
         </section>
 <!--        Section objective End         -->
