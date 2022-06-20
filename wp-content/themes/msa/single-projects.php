@@ -45,12 +45,12 @@ get_header();
                         <h2 class="single-project--subtitle">
                             Scope of Works
                         </h2>
-                        <p class="single-project--text">
-                            Demolition and installation of concrete K&G, Footpaths, Kerb ramps and Driveways.
-                            Installation of concrete Threshold
-                            Of installation Asphalt Road re-sheet
-                            Installation of Signage and Line marking
-                        </p>
+                        <ul class="single-project--text">
+                            <li>Demolition and installation of concrete K&G, Footpaths, Kerb ramps and Driveways.</li>
+                            <li>Installation of concrete Threshold</li>
+                            <li>Of installation Asphalt Road re-sheet</li>
+                            <li>Installation of Signage and Line marking</li>
+                        </ul>
                     </div>
                     <div class="single-project--flex-item">
                         <h2 class="single-project--subtitle">
