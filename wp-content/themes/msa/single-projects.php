@@ -6,7 +6,7 @@ get_header();
         <?php
 
         //  Section Hero Start
-        get_template_part( 'template-parts/section', 'hero' );
+//        get_template_part( 'template-parts/section', 'hero' );
         //  Section Hero End
 
         // Content Service Starts
@@ -15,7 +15,7 @@ get_header();
 ?>
 
 <!--        Featured Project    -->
-        <section class="project-section ks-spt ks-spb">
+        <section class="project-section ks-smb ks-spb">
             <div class="container">
                 <h2 class="section-title">Chapel Rd, Bankstown, St. Felix Primary School, New Pedestrian Crossing</h2>
                 <div class="project-slider--container">

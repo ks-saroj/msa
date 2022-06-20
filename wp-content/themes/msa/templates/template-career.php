@@ -20,13 +20,11 @@ get_header();
         <section class="career-section ks-spt ks-spb">
             <div class="container">
                 <div class="career-flex">
-                    <div class="career--flex-item">
-                        <figure class="mb-0 career--image">
-                            <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/career/image.png" alt="image">
+                        <figure class="mb-0 career--image-container career--flex-item">
+                            <img class="cover-image img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/images/career/image.png" alt="image">
                         </figure>
-                    </div>
-                    <div class="career--flex-item">
-                        <div class="career--text">
+
+                        <div class="career--text career--flex-item">
                             <p>
                                 MSA Civil and Communication is a dynamic and progressive organisation. As our company expands, we provide our staff with excellent opportunities and career paths, and the training needed to reach their individual aspirations.
                             </p>
@@ -43,7 +41,6 @@ get_header();
                                 We are always on the lookout for enthusiastic people to join MSA Civil and Communication, if you’d like the opportunity to be part of our team, send your resume to info@msabuilding.com.au
                             </p>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
