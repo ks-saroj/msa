@@ -28,11 +28,11 @@ if ($the_query->have_posts()) :
 //            $duration = 1600 + $cnt*800;
                     ?>
                     <div class="slider-box">
-                        <figure>
+                      <a href="<?php the_permalink(); ?>"><figure>
                             <img class="img-fluid cover-image" src="<?php echo $custom_thumbnail['url']; ?>"
                                  alt="<?php echo the_title(); ?>">
-                        </figure>
-                        <h3 class="service-title"><?php echo the_title(); ?></h3>
+                        </figure><a/>
+                       <a href="<?php the_permalink(); ?>"><h3 class="service-title"><?php echo the_title(); ?></h3><a/>
                     </div>
                 <?php
 //                $cnt++;

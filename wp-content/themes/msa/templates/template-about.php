@@ -8,7 +8,7 @@
  */
 
 get_header();
-$post_id = getIdBySlug('about-text-section', 'sections');
+$post_id = getIdBySlug('about-us', 'page');
 $partner_gallery = CFS()->get('about_meta', $post_id);
 $title = CFS()->get('title', $post_id);
 $about_contents = CFS()->get('content', $post_id);

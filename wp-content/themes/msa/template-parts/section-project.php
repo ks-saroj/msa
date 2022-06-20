@@ -21,10 +21,10 @@ if ($the_query->have_posts()) :
             $custom_thumbnail = get_field('custom_thumbnail');
             ?>
             <div class="slider-box">
-                <figure>
+              <a href="<?php the_permalink(); ?>">  <figure>
                     <img class="img-fluid cover-image" src="<?php echo $custom_thumbnail['url']; ?>" alt="Service 1">
-                </figure>
-                <h3 class="project-title"><?php echo the_title(); ?></h3>
+                </figure></a>
+                <a href="<?php the_permalink(); ?>"><h3 class="project-title"><?php echo the_title(); ?></h3></a>
             </div>
             <?php
             endwhile;

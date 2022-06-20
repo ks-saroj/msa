@@ -8,6 +8,9 @@
  */
 
 get_header();
+$post_id = getIdBySlug('careers', 'page');
+$post_body = get_field('post', $post_id);
+$image = get_field('custom_thumbnail', $post_id);
 ?>
     <main id="page-career" class="site-main">
         <?php
@@ -22,26 +25,12 @@ get_header();
                 <div class="career-flex">
                     <div class="career--flex-item">
                         <figure class="mb-0 career--image">
-                            <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/career/image.png" alt="image">
+                            <img class="cover-image" src="<?php echo $image['url']; ?>" alt="image">
                         </figure>
                     </div>
                     <div class="career--flex-item">
                         <div class="career--text">
-                            <p>
-                                MSA Civil and Communication is a dynamic and progressive organisation. As our company expands, we provide our staff with excellent opportunities and career paths, and the training needed to reach their individual aspirations.
-                            </p>
-                            <p>
-                                Our people work together as a team to deliver exceptional projects.
-                            </p>
-                            <p>
-                                As a highly regarded Infrastructure builder, MSA Civil and Communication is constantly delivering high-quality outcomes for our clients. Infrastructure building is an exciting industry, where the attitude, skill, and diligence of individuals can make a real difference.
-                            </p>
-                            <p>
-                                We are often looking for people pursuing careers, ranging from on-site and construction (Senior project managers, site managers, foremen, or labourers) to office-based (contract administrators, estimators, finance, cadet, or undergraduates)
-                            </p>
-                            <p>
-                                We are always on the lookout for enthusiastic people to join MSA Civil and Communication, if you’d like the opportunity to be part of our team, send your resume to info@msabuilding.com.au
-                            </p>
+                            <?php echo $post_body; ?>
                         </div>
                     </div>
                 </div>
