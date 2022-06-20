@@ -32,12 +32,12 @@ $author = get_field('author', $post_id);
                 <h2 class="section-title"><?php echo $title ?></h2>
                 <article>
                     <?php foreach($about_contents as  $k => $content): ?>
-                    <div class="about-content <?php echo $k%2 ==0? '':'reverse' ?>">
-                            <div class="about-content--text">
-                     <p> <?php echo $content['body'] ?></p>
-                            </div>
-                        <figure class="about-content--image mb-0">
-                            <img class="cover-image" src="<?php echo $content['image'] ?>" alt="image">
+                    <div class="about-content-flex <?php echo $k%2 ==0? '':'reverse' ?>">
+                        <div class="about-content--flex-item about-content--text">
+                            <?php echo $content['body'] ?>
+                        </div>
+                        <figure class="about-content--flex-item about-content--image-container mb-0">
+                            <img class="img-fluid cover-image" src="<?php echo $content['image'] ?>" alt="image">
                         </figure>
                     </div>
                     <?php endforeach ?>
@@ -64,8 +64,8 @@ $author = get_field('author', $post_id);
                                 <p>Our clients trust our transparency, integrity and reliability. We value our relationships so are never complacent in our reputation and strive to become a significant name in the Australian major market. That is our mission.</p>
                             </div>
                         </div>
-                        <figure class="objective-flex--item objective-image mb-0">
-                            <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/mission.png" alt="mission">
+                        <figure class="objective-flex--item objective--image-container mb-0">
+                            <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/mission.png" alt="mission">
                         </figure>
                     </div>
                 </div>
@@ -85,8 +85,8 @@ $author = get_field('author', $post_id);
                                 </p>
                             </div>
                         </div>
-                        <figure class="objective-flex--item objective-image mb-0">
-                            <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/value.png" alt="mission">
+                        <figure class="objective-flex--item objective--image-container mb-0">
+                            <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/value.png" alt="mission">
                         </figure>
                     </div>
                 </div>

@@ -918,45 +918,60 @@ footer .footer-logo {
 /*****************************
   About Inner Content Starts
 ******************************/
-#page-about .partner-section {
-    padding-bottom: 0;
-}
-.about-content:not(:first-child) {
+.about-content-flex:not(:first-child) {
     padding-top: 60px;
 }
 
-.about-content {
+.about-content-flex {
     display: flex;
     justify-content: space-between;
     column-gap: 60px;
     row-gap: 30px;
+    flex-wrap: wrap;
 }
 
-.about-content.reverse {
+.about-content-flex.reverse {
     flex-direction: row-reverse;
 }
 
 .about-content--text {
     text-align: justify;
-    flex: 1;
+    line-height: 26px;
 }
 
-.about-content--image {
-    flex: 1;
+.about-content--image-container {
+    width: 100%;
+    max-height: unset;
+    min-height: unset;
+    height: 418px;
 }
 
 .about-content--text p {
     margin-bottom: 30px;
-    line-height: 26px;
 }
 
 .about-content--text p:last-child {
     margin-bottom: 0;
 }
 
-.about-content--image img {
+.about-content--image-container img {
     height: 100%;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .about-content-flex{
+        flex-wrap: nowrap;
+    }
+    .about-content--flex-item{
+        flex: 1;
+    }
+
+    .about-content--image-container{
+        max-height: 940px;
+        min-height: 494px;
+        height: 100%;
+    }
 }
 
 /*****************************
@@ -971,16 +986,13 @@ footer .footer-logo {
     gap: 30px;
     column-gap: 60px;
     row-gap: 30px;
+    flex-wrap: wrap;
 }
 
 .objective-flex.reverse{
     flex-direction: row-reverse;
 }
 
-.objective-flex--item {
-    flex: 1;
-
-}
 
 .objective--text p {
     margin-bottom: 30px;
@@ -992,11 +1004,32 @@ footer .footer-logo {
     margin-bottom: 0;
 }
 
-.objective-image img {
+.objective--image-container{
+    width: 100%;
+    max-height: unset;
+    min-height: unset;
+    height: 393px;
+}
+
+.objective--image-container img {
     height: 100%;
     width: 100%;
 }
 
+@media (min-width: 768px) {
+    .objective-flex{
+        flex-wrap: nowrap;
+    }
+    .objective-flex--item {
+        flex: 1;
+    }
+
+    .objective--image-container{
+        max-height: 940px;
+        min-height: 265px;
+        height: 100%;
+    }
+}
 
 /*****************************
   About slogan Starts
