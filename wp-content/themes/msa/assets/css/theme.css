@@ -1423,6 +1423,7 @@ footer .footer-logo {
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
 }
 .arrows.left.prev3 img,
 .arrows.right.next3 img
@@ -1435,14 +1436,23 @@ footer .footer-logo {
 .arrows.right.next3{
     right: -100px;
 }
-.project-slider--image-container {
-    max-height: 515px;
-}
+
 .project-slider--image-container img{
     width: 100%;
-    height: 100%;
+    height: 380px;
 }
-
+@media (min-width: 768px) {
+    .project-slider--image-container img{
+        height: 515px;
+    }
+}
+@media (min-width: 1418px) {
+    .arrows.left.prev3,
+    .arrows.right.next3
+    {
+        display: inline-block;
+    }
+}
 /*****************************
   Project Inner Content
 ******************************/
@@ -1460,11 +1470,19 @@ footer .footer-logo {
     line-height: 39px;
     margin-bottom: 15px;
 }
-p.single-project--text{
+p.single-project--text,
+ul.single-project--text{
     margin-bottom: 0;
     line-height: 26px;
     text-align: justify;
 }
+ul.single-project--text{
+    padding-left: 20px;
+}
+ul.single-project--text li{
+    list-style: disc;
+}
+
 @media (min-width: 768px) {
     .project-content-flex{
         flex-wrap: nowrap;
