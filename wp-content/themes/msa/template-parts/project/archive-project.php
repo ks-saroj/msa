@@ -39,7 +39,6 @@ if ($the_query->have_posts()) :
                         <h2 class="post-title mb-0"><?php the_title(); ?></h2>
                     </a>
                 </div>
-
             <?php
             endwhile;
             ?>

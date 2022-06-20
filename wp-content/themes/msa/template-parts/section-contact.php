@@ -6,27 +6,28 @@
                     <div>
                         <h2 class="contact-topic-title">Head Office</h2>
                         <p>
-                            10 Loftus St, Arncliffe
-                            NSW 2205, Australia
+                            <?php echo nl2br(htmlspecialchars_decode(get_option('msa_head_office'))); ?>
                         </p>
                     </div>
                     <div>
                         <h2 class="contact-topic-title">Postal</h2>
                         <p>
-                            PO Box 105,
-                            South Bexley, NSW, 2207
+                            <?php echo nl2br(htmlspecialchars_decode(get_option('msa_postal'))); ?>
+
                         </p>
                     </div>
                     <div>
                         <h2 class="contact-topic-title">Phone</h2>
                         <p>
-                            9597 3879
+                            <?php echo htmlspecialchars_decode(get_option('msa_contact')); ?>
+
                         </p>
                     </div>
                     <div>
                         <h2 class="contact-topic-title">Email</h2>
                         <p>
-                            info@msabuilding.com.au
+                          <?php echo nl2br(htmlspecialchars_decode(get_option('msa_contact_email'))); ?>
+
                         </p>
                     </div>
                 </div>
