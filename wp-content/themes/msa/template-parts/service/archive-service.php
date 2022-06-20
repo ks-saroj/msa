@@ -21,10 +21,12 @@ if ($the_query->have_posts()) :
                     $the_query->the_post();
                     $custom_thumbnail = get_field('custom_thumbnail');
                     ?>
+
                     <div class="service-box">
                         <a href="<?php the_permalink(); ?>">
                             <figure>
-                                <img src="<?php echo $custom_thumbnail['url'] ?>" class="img-fluid cover-image w-100" alt="">
+                                <img src="<?php echo $custom_thumbnail['url'] ?>" class="img-fluid cover-image w-100"
+                                     alt="">
                             </figure>
                         </a>
                         <a href="<?php the_permalink(); ?>">

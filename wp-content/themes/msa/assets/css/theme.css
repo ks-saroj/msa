@@ -440,8 +440,29 @@ Hero Section Starts
 }
 
 #front-page .hero-section .hero-section-title {
-    font-size: 58px;
-    line-height: 65px;
+    font-size: 32px;
+    line-height: 48px;
+}
+#front-page .hero-section .mobile-video{
+    position: relative;
+    height: 100%;
+}
+#front-page .hero-section .mobile-video video{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#front-page .hero-section .desktop-video{
+    display: none;
+}
+@media (min-width: 768px) {
+    #front-page .hero-section .hero-section-title {
+        font-size: 58px;
+        line-height: 65px;
+    }
 }
 
 /**======================
@@ -897,6 +918,11 @@ footer .footer-logo {
     color: #ffffff;
     text-decoration: none;
 }
+@media (min-width: 640px) {
+    .top-footer-grid .left-col .footer-sponsor {
+        justify-content: flex-start;
+    }
+}
 @media (min-width: 768px) {
     .top-footer-grid {
         grid-template-columns: auto auto;
@@ -904,9 +930,6 @@ footer .footer-logo {
     }
     .top-footer-grid .left-col {
         flex-direction: row;
-    }
-    .top-footer-grid .left-col .footer-sponsor {
-        justify-content: flex-start;
     }
 }
 @media (min-width: 1024px) {
@@ -1045,35 +1068,47 @@ footer .footer-logo {
 ******************************/
 .service-box-container {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
 }
-
+.service-box-container .service-box{
+    grid-column: span 2;
+}
 .service-box-container .service-box figure {
     margin-bottom: 44px;
 }
-
 .service-box-container .service-box figure img {
     height: 460px;
     border-radius: 20px;
 }
-
 .service-box a {
     color: #000000;
 }
-
 .service-box a:hover {
     color: #000000;
     text-decoration: none;
 }
-
 .service-box .post-title {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 15px;
 }
-
+@media (min-width: 640px) {
+    .service-box-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
+@media (min-width: 1024px) {
+    .service-box-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .service-box-container .service-box:nth-child(5n+4),
+    .service-box-container .service-box:nth-child(5n+5){
+        grid-column: span 3;
+    }
+}
 /*****************************
   Archive Project Starts
 ******************************/
@@ -1098,7 +1133,6 @@ footer .footer-logo {
 
 .project-box-container {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
     gap: 30px;
 }
 
@@ -1128,7 +1162,16 @@ footer .footer-logo {
     line-height: 29px;
     margin-bottom: 6px;
 }
-
+@media (min-width: 640px) {
+    .project-box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 991px) {
+    .project-box-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 /*****************************
   Content Service Starts
 ******************************/
@@ -1232,12 +1275,18 @@ footer .footer-logo {
 /*****************************
   Contact Page Starts
 ******************************/
-.contact-page .contact-grid {
+.contact-page .contact-grid{
     display: grid;
-    grid-template-columns: 55% 39%;
-    justify-content: space-between;
+    gap: 60px;
 }
-
+.contact-page .contact-grid .left-col{
+    display: grid;
+    gap: 60px
+}
+.contact-page .contact-grid .left-col .contact-details-box {
+    display: grid;
+    grid-row-gap: 30px;
+}
 .contact-page .contact-grid .contact-topic-title {
     font-weight: 700;
     font-size: 32px;
@@ -1245,12 +1294,25 @@ footer .footer-logo {
     margin-bottom: 20px;
 }
 
-.contact-page .contact-grid .left-col .contact-details-box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 90px;
+@media (min-width: 575px) {
+    .contact-page .contact-grid .left-col .contact-details-box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 50px;
+    }
 }
-
-.contact-page .contact-grid .left-col p {
-    margin-bottom: 0;
+@media (min-width: 768px) {
+    /*.contact-page .contact-grid .left-col{*/
+    /*    grid-template-columns: repeat(2, 1fr);*/
+    /*}*/
+    .contact-page .contact-grid .left-col .contact-details-box {
+        grid-row-gap: 60px;
+    }
+}
+@media (min-width: 1024px) {
+    .contact-page .contact-grid{
+        grid-template-columns: 55% 39%;
+    }
+    .contact-page .contact-grid .left-col{
+        gap: 90px
+    }
 }

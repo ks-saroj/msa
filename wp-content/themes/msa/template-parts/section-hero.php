@@ -20,7 +20,7 @@ $thumbnail_url = get_the_post_thumbnail_url('','full');
     <div class="hero-section-text">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 my-auto">
+                <div class="col-lg-8 col-12">
                     <div data-aos="fade-down" data-aos-duration="800" class="left-box aos-init aos-animate">
                         <h2 class="hero-section-title">
                             <?php echo htmlspecialchars_decode($page_title); ?>
