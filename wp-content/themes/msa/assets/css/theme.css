@@ -145,7 +145,15 @@ img.cover-image {
     line-height: 20px;
     margin-bottom: 30px;
 }
-
+a.no-decoration{
+    color: #000000;
+}
+a.no-decoration:hover{
+    text-decoration: none;
+}
+.slider-arrow-box .next{
+    cursor: pointer;
+}
 @media (min-width: 768px) {
     .section-title {
         font-size: 36px;
@@ -1451,4 +1459,77 @@ p.single-project--text{
 }
 .widget select{
     max-width: 350px;
+}
+/**=======================
+* STICKY FORM
+=========================*/
+.ks-sticky-form{
+    width: 285px;
+    position: fixed;
+    transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -webkit-transition: all ease 1s;
+    right: -285px;
+    z-index: 999;
+    top: 30%;
+    background: #fff;
+    margin-left: 20px;
+    padding: 18px 18px 16px 18px;
+    border: 1px solid #000;
+    border-right-color: transparent;
+}
+
+.ks-sticky-form.active{
+    right: 0;
+}
+.sticky-form-title{
+    position: absolute;
+    cursor: pointer;
+    left: -93px;
+    font-weight: 700;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px 20px;
+    top: 40%;
+    display: block;
+}
+/** placeholder design for skicky form **/
+.ks-sticky-form.contact-form input,
+.ks-sticky-form.contact-form select {
+    height: 30px;
+    font-size: 14px;
+}
+.ks-sticky-form.contact-form textarea{
+    font-size: 14px;
+}
+.ks-sticky-form.contact-form .input-placeholder .placeholder{
+    top: 2px;
+    font-size: 14px;
+}
+.ks-sticky-form.contact-form .input-placeholder .placeholder.placeholder-textarea{
+    top: -2px;
+    font-size: 14px;
+}
+.ks-sticky-form.contact-form p{
+    margin-bottom: 5px;
+}
+.ks-sticky-form.contact-form button[type='submit']{
+    font-size: 14px;
+    min-width: auto;
+    padding:0 16px;
+    line-height: 32px;
+    height: 32px;
+}
+.ks-sticky-form.contact-form .wpcf7-spinner{
+    position: absolute;
+    left: -40px;
+    top: 22px;
+}
+.ks-sticky-form.contact-form .wpcf7-not-valid-tip{
+    font-size: 12px;
 }

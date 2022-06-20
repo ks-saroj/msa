@@ -22,28 +22,28 @@ if ($the_query->have_posts()) :
                 while ($the_query->have_posts()) :
                     $the_query->the_post();
                     $custom_thumbnail = get_field('custom_thumbnail');
-//            if($cnt % 2 === 0){
-//                $cnt = 0;
-//            }
-//            $duration = 1600 + $cnt*800;
                     ?>
                     <div class="slider-box">
-                      <a href="<?php the_permalink(); ?>"><figure>
-                            <img class="img-fluid cover-image" src="<?php echo $custom_thumbnail['url']; ?>"
-                                 alt="<?php echo the_title(); ?>">
-                        </figure><a/>
-                       <a href="<?php the_permalink(); ?>"><h3 class="service-title"><?php echo the_title(); ?></h3><a/>
+                        <a href="<?php the_permalink(); ?>">
+                            <figure>
+                                <img class="img-fluid cover-image" src="<?php echo $custom_thumbnail['url']; ?>"
+                                     alt="<?php echo the_title(); ?>">
+                            </figure>
+                        </a>
+                        <a class="no-decoration" href="<?php the_permalink(); ?>"><h3 class="service-title"><?php echo the_title(); ?></h3>
+                        </a>
                     </div>
                 <?php
-//                $cnt++;
                 endwhile;
                 ?>
 
             </div>
             <div class="slider-arrow-box">
-            <span class="next"><img class="img-fluid cover-image"
-                                    src="<?php echo get_template_directory_uri(); ?>/assets/images/angle-right.png"
-                                    alt=""></span>
+            <span class="next">
+                <img class="img-fluid cover-image"
+                     src="<?php echo get_template_directory_uri(); ?>/assets/images/angle-right.png"
+                     alt="">
+            </span>
             </div>
         </div>
     </section>
