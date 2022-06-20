@@ -1199,6 +1199,7 @@ footer .footer-logo {
     display: flex;
     column-gap: 67px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .sustainability--top-flex {
@@ -1223,7 +1224,13 @@ footer .footer-logo {
 .sustainability--bottom-flex-item > div:not(:last-child) {
     margin-bottom: 60px;
 }
+@media (min-width: 768px) {
+    .sustainability--top-flex,
+    .sustainability--bottom-flex {
+        flex-wrap: nowrap;
+    }
 
+}
 /*****************************
   Career Starts
 ******************************/
