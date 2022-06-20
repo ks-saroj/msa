@@ -1221,8 +1221,12 @@ footer .footer-logo {
 .featured-service--subtitle {
     font-size: 24px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: 29px;
     margin-bottom: 0;
+}
+.featured-service--item a{
+    color: unset;
+    text-decoration: none;
 }
 .featured-service-section  .ks-btn{
     white-space: normal;
