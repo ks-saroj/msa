@@ -835,9 +835,7 @@ footer .footer-logo {
 /*****************************
   About Inner Content Starts
 ******************************/
-    #page-about .partner-section{
-        padding-bottom: 0;
-    }
+
     .about-content:not(:first-child){
         padding-top: 60px;
     }
@@ -1035,6 +1033,9 @@ footer .footer-logo {
 /*****************************
   Content Service Starts
 ******************************/
+#page-service .service-section{
+    margin-bottom: 100px;
+}
 .featured-service--flex{
     display: flex;
     column-gap: 60px;
@@ -1143,4 +1144,54 @@ footer .footer-logo {
 }
 .contact-grid .left-col p{
     margin-bottom: 0;
+}
+/*****************************
+  Project Inner Top Slider
+******************************/
+.project-slider--container{
+    margin-bottom: 60px;
+    position: relative;
+}
+.arrows.left.prev3,
+.arrows.right.next3{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrows.left.prev3{
+    left: 0;
+
+}
+.arrows.right.next3{
+    right: 0;
+}
+.project-slider--image-container {
+    max-height: 515px;
+}
+.project-slider--image-container img{
+    width: 100%;
+    height: 100%;
+}
+/*****************************
+  Project Inner Content
+******************************/
+.project-content-flex{
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+.single-project--flex-item{
+    flex: 1;
+}
+.single-project--subtitle{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 15px;
+}
+p.single-project--text{
+    margin-bottom: 0;
+    line-height: 26px;
+    text-align: justify;
 }

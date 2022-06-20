@@ -129,6 +129,21 @@
 
 
 
+	// //inner project slider starts
+	// jQuery("#project-slider").slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	arrows: true,
+	// 	dots: false,
+	// 	infinite: true,
+	// 	speed: 1000,
+	// 	autoplay: true,
+	// 	prevArrow: $(".prev3"),
+	// 	nextArrow: $(".next3"),
+	// });
+	// //inner project slider ends
+
+
 	//inner project slider starts
 	jQuery("#project-slider").slick({
 		slidesToShow: 1,
@@ -137,7 +152,7 @@
 		dots: false,
 		infinite: true,
 		speed: 1000,
-		autoplay: true,
+		autoplay: false,
 		prevArrow: $(".prev3"),
 		nextArrow: $(".next3"),
 	});
