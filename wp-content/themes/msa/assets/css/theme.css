@@ -1094,10 +1094,35 @@ footer .footer-logo {
 /*****************************
   Career Starts
 ******************************/
+.career-section{
+    margin-top: 20px;
+}
 .career-flex{
     display: flex;
     justify-content: space-between;
+    gap: 60px;
 }
+.career--flex-item{
+    flex: 1;
+}
+.career--image,
+.career--image img{
+    height: 100%;
+    width: 100%;
+}
+
+.career--text{
+    line-height: 26px;
+    text-align: justify;
+}
+.career--text p{
+    margin-bottom: 40px;
+}
+
+.career--text p:last-child{
+    margin-bottom: 0;
+}
+
 /*****************************
   Contact Page Starts
 ******************************/
