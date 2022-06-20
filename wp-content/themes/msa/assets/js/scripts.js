@@ -19,7 +19,7 @@
 		dots: false,
 		infinite: true,
 		speed: 1000,
-		autoplay: false,
+		autoplay: true,
 		prevArrow: jQuery('.service-section .slider-arrow-box .prev'),
 		nextArrow: jQuery('.service-section .slider-arrow-box .next'),
 		responsive: [
@@ -110,9 +110,9 @@
 				}
 			},
 			{
-				breakpoint: 767,
+				breakpoint: 769,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 				}
 			},
