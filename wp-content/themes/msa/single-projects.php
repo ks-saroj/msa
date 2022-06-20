@@ -67,8 +67,6 @@ get_header();
         </section>
 <!--        Featured  Project   -->
 
-
-
         <?php
         // Section Projects Starts
         get_template_part( 'template-parts/section', 'project' );
