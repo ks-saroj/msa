@@ -8,10 +8,15 @@
  */
 
 get_header();
+$post_id = getIdBySlug('about-text-section', 'sections');
+$partner_gallery = CFS()->get('about_meta', $post_id);
+$title = CFS()->get('title', $post_id);
+$about_contents = CFS()->get('content', $post_id);
+$slogan = get_field('slogan', $post_id);
+$author = get_field('author', $post_id);
 ?>
     <main id="page-about" class="site-main">
         <?php
-
         //  Section Hero Start
         get_template_part( 'template-parts/section', 'hero' );
         //  Section Hero End
@@ -24,32 +29,18 @@ get_header();
 <!--        Section about content Start-->
         <section class="section-about-content ks-spt">
             <div class="container">
-                <h2 class="section-title">About MSA Civil and Communications</h2>
+                <h2 class="section-title"><?php echo $title ?></h2>
                 <article>
-                    <div class="about-content">
+                    <?php foreach($about_contents as  $k => $content): ?>
+                    <div class="about-content <?php echo $k%2 ==0? '':'reverse' ?>">
                             <div class="about-content--text">
-                                <p>MSA Civil and Communications Pty Ltd is an Australian owned Civil engineering company founded in 2011. Since then, the company has grown to become one of the most respected civil engineering companies in Sydney with over 50+ employees.  Our speciality is technical urban projects. With a range of skilled personnel and specialised plant, we have the flexibility, knowledge, and depth to deliver complex infrastructure projects and react quickly to changes in scope.</p>
-
-                                <p>MSA Civil and Communication is known for its quality work. We are proud of our private ownership which gives us the flexibility to work with any partner. Our collaborative approach and a real desire to get things done help our customers and partners deliver the results they want each and every time. We offer clients a vertically integrated business structure. We’re the team people want on their side and our innovative approach to partnering has been recognised with prestigious accolades.</p>
-
-                                <p>With safety, our approach is simple. No compromises – ever. If it cannot be done safely, we won’t do it. Our project and risk management regimes help us manage challenges and complexities. Putting projects and relationships first, we’re known for sorting out any problems that do arise, in person. We’re committed to quality.</p>
+                     <p> <?php echo $content['body'] ?></p>
                             </div>
                         <figure class="about-content--image mb-0">
-                            <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/about-bg.png" alt="image">
+                            <img class="cover-image" src="<?php echo $content['image'] ?>" alt="image">
                         </figure>
                     </div>
-                    <div class="about-content reverse">
-                        <div class="about-content--text">
-                            <p>Our attitude is to do it right the first time, every time. We’re AS/NZS ISO 9001, 45001 & 14001 certified across all our operations. Our collaborative approach to working with customers to determine their quality goals has been recognised with numerous awards.</p>
-
-                            <p>We know our clients are under pressure to complete projects on time and within budget. That is why we are constantly evolving our design techniques, delivery methods and technology offering to complete projects quicker, more cost-effectively and with less environmental and community impact.</p>
-
-                            <p>We are experts in working in partnership with Local Government Agencies across a diverse range of disciplines including Streetscape Upgrades, Concrete Kerb & Gutters, Concrete Footpaths, Stormwater Upgrades, Road Re-Construction, Road re-sheet, Parks & Landscapes, and minor restorations.</p>
-                        </div>
-                        <figure class="about-content--image mb-0">
-                            <img class="cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/about/about-2.png" alt="image">
-                        </figure>
-                    </div>
+                    <?php endforeach ?>
                 </article>
             </div>
         </section>
@@ -110,8 +101,8 @@ get_header();
         <!--        Section slogan start       -->
         <section class="slogan-section ks-spt">
             <div class="container">
-                <h2 class="section-title slogan-section--title">“Our success begins with the satisfaction of our clients.”</h2>
-                <h3 class="slogan-section--subtitle">-Managing Director</h3>
+                <h2 class="section-title slogan-section--title">“<?php echo $slogan ?>”</h2>
+                <h3 class="slogan-section--subtitle">-<?php echo $author ?></h3>
             </div>
         </section>
         <!--        Section slogan End         -->

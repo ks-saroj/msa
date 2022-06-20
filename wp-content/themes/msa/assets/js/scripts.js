@@ -24,14 +24,14 @@
 		nextArrow: jQuery('.service-section .slider-arrow-box .next'),
 		responsive: [
 			{
-				breakpoint: 991,
+				breakpoint: 993,
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
 				},
 			},
 			{
-				breakpoint: 640,
+				breakpoint: 769,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
@@ -110,9 +110,9 @@
 				}
 			},
 			{
-				breakpoint: 767,
+				breakpoint: 769,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 				}
 			},
