@@ -10,6 +10,7 @@
  */
 
 ?>
+<<<<<<< HEAD
 
 <!--    <section class="top-footer section-padding-top">-->
 <!--        <div class="container">-->
@@ -57,7 +58,6 @@ $linkedin =  nl2br(htmlspecialchars_decode(get_option('msa_head_office')));
 ?>
 
 <footer class="ks-spt">
-
     <div class="top-footer">
         <div class="container">
             <div class="top-footer-grid">

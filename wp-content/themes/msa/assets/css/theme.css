@@ -158,7 +158,7 @@ header {
     right: 0;
 }
 
-.home header#masthead.scrolled-navbar {
+header#masthead.scrolled-navbar {
     background: #ffffff;
     /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -830,4 +830,225 @@ footer .footer-logo {
 .bottom-footer-grid a:hover {
     color: #ffffff;
     text-decoration: none;
+}
+
+/*****************************
+  About Inner Content Starts
+******************************/
+
+    .about-content:not(:first-child){
+        padding-top: 60px;
+    }
+
+    .about-content{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 60px;
+        row-gap: 30px;
+    }
+
+    .about-content.reverse{
+        flex-direction: row-reverse;
+    }
+
+    .about-content--text{
+        text-align: justify;
+        flex: 1;
+    }
+
+    .about-content--image{
+        flex: 1;
+    }
+
+    .about-content--text p{
+        margin-bottom: 30px;
+        line-height: 26px;
+    }
+
+    .about-content--text p:last-child{
+        margin-bottom: 0;
+    }
+
+    .about-content--image img{
+        height: 100%;
+        width: 100%;
+    }
+
+/*****************************
+  About Inner mission Starts
+******************************/
+.mission-flex
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    column-gap: 60px;
+    row-gap: 30px;
+}
+
+.mission-flex--item{
+    flex: 1;
+
+}
+
+.mission--text p{
+   margin-bottom: 30px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.mission--text p:last-child{
+    margin-bottom: 0;
+}
+
+.mission-image img{
+    height: 100%;
+    width: 100%;
+}
+
+/*****************************
+  About Inner value Starts
+******************************/
+.value-section{
+    padding-top: 60px;
+}
+.value-flex
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    column-gap: 60px;
+    row-gap: 30px;
+}
+
+.value-flex--item{
+    flex: 1;
+
+}
+
+.value--text p{
+    margin-bottom: 30px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.value--text p:last-child{
+    margin-bottom: 0;
+}
+
+.value-image img{
+    height: 100%;
+    width: 100%;
+}
+
+/*****************************
+  About slogan Starts
+******************************/
+.slogan-section--title.section-title{
+    margin-bottom: 30px;
+}
+.slogan-section--subtitle{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: right;
+}
+
+/*****************************
+  Archive Service Starts
+******************************/
+.service-box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+}
+.service-box-container .service-box figure{
+    margin-bottom: 44px;
+}
+.service-box-container .service-box figure img{
+    height: 460px;
+    border-radius: 20px;
+}
+.service-box a{
+    color: #000000;
+}
+.service-box a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+.service-box .post-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 15px;
+}
+/*****************************
+  Archive Project Starts
+******************************/
+.filter-box select{
+    width: 504px;
+    max-width: 100%;
+    border-radius: 50px;
+    /*padding: 10px 26px;*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #000000;
+    background-image: url("../../assets/images/angle-down.png");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    background-size: 16px;
+    border: 1px solid #000000;
+}
+.project-box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+}
+.project-box-container .project-box figure img{
+    height: 427px;
+}
+.project-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+.project-box a{
+    color: #000000;
+}
+.project-box a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+.project-box .post-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 6px;
+}
+/*****************************
+  Contact Page Starts
+******************************/
+.contact-grid{
+    display: grid;
+    grid-template-columns: 55% 39%;
+    justify-content: space-between;
+}
+.contact-grid .contact-topic-title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 20px;
+}
+.contact-grid .left-col .contact-details-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 90px;
+}
+.contact-grid .left-col p{
+    margin-bottom: 0;
 }

@@ -21,7 +21,7 @@ get_header();
         // Archive Service Starts
 
         // Section Partner Starts
-//        get_template_part( 'template-parts/section', 'partner' );
+        get_template_part( 'template-parts/section', 'partner' );
         // Section Partner Ends
 
         ?>
