@@ -830,7 +830,9 @@ footer .footer-logo {
 /*****************************
   About Inner Content Starts
 ******************************/
-
+    #page-about .partner-section{
+        padding-bottom: 0;
+    }
     .about-content:not(:first-child){
         padding-top: 60px;
     }
@@ -1025,6 +1027,96 @@ footer .footer-logo {
     line-height: 29px;
     margin-bottom: 6px;
 }
+/*****************************
+  Content Service Starts
+******************************/
+.featured-service--flex{
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+}
+
+.featured-service--text{
+    line-height: 26px;
+    text-align: justify;
+    margin-bottom: 145px;
+}
+
+.featured-service--title{
+    margin-bottom: 35px;
+    font-size: 32px;
+}
+
+.featured-section--image{
+    margin-bottom: 30px;
+}
+
+.featured-service--subtitle{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    margin-bottom: 0;
+}
+/*****************************
+  Sustainability Starts
+******************************/
+.sustainability--top-flex,
+.sustainability--bottom-flex{
+    display: flex;
+    column-gap: 67px;
+    justify-content: space-between;
+}
+.sustainability--top-flex{
+    margin-bottom: 60px;
+}
+.sustainability--top-flex-item,
+.sustainability--bottom-flex-item{
+    flex: 1;
+}
+.sustainability--title{
+    margin-bottom: 30px;
+}
+
+.sustainability--subtitle{
+    line-height: 26px;
+    text-align: justify;
+    margin-bottom: 0;
+}
+.sustainability--bottom-flex-item > div:not(:last-child){
+    margin-bottom: 60px;
+}
+/*****************************
+  Career Starts
+******************************/
+.career-section{
+    margin-top: 20px;
+}
+.career-flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+.career--flex-item{
+    flex: 1;
+}
+.career--image,
+.career--image img{
+    height: 100%;
+    width: 100%;
+}
+
+.career--text{
+    line-height: 26px;
+    text-align: justify;
+}
+.career--text p{
+    margin-bottom: 40px;
+}
+
+.career--text p:last-child{
+    margin-bottom: 0;
+}
+
 /*****************************
   Contact Page Starts
 ******************************/

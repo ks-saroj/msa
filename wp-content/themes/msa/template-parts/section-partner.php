@@ -1,33 +1,23 @@
+<?php
+$post_id = getIdBySlug('section-partner','sections');
+$partners = CFS()->get('gallery',$post_id);
+$section_title = get_field('section_title',$post_id);
+$section_subtitle = get_field('section_subtitle',$post_id);
+?>
 <section class="partner-section ks-spb ks-spt">
     <div class="container">
-        <h2 class="section-title">Built on partnerships</h2>
-        <p class="section-subtitle">Creating leading partnerships across government and private organisations for over 15 years.</p>
+        <h2 class="section-title"><?php echo $section_title; ?></h2>
+        <p class="section-subtitle"><?php echo $section_title; ?></p>
         <div class="partner-slider">
+            <?php foreach($partners as $partner): ?>
             <div class="slider-box">
                 <figure>
-                    <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/partner1.png" alt="Partner">
+                    <img class="img-fluid cover-image" src="<?php echo $partner['image']; ?>" alt="Partner">
                 </figure>
             </div>
-            <div class="slider-box">
-                <figure>
-                    <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/partner2.png" alt="Partner">
-                </figure>
-            </div>
-            <div class="slider-box">
-                <figure>
-                    <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/partner3.png" alt="Partner">
-                </figure>
-            </div>
-            <div class="slider-box">
-                <figure>
-                    <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/partner4.png" alt="Partner">
-                </figure>
-            </div>
-            <div class="slider-box">
-                <figure>
-                    <img class="img-fluid cover-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/partners/partner5.png" alt="Partner">
-                </figure>
-            </div>
+            <?php
+            endforeach;
+            ?>
         </div>
     </div>
 </section>
