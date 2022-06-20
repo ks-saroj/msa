@@ -15,7 +15,7 @@ get_header();
 ?>
 
 <!--        Featured Project    -->
-        <section class="project-section ks-smb ks-spb">
+        <section class="project-section ks-smb ks-smt">
             <div class="container">
                 <h2 class="section-title">Chapel Rd, Bankstown, St. Felix Primary School, New Pedestrian Crossing</h2>
                 <div class="project-slider--container">
