@@ -483,11 +483,14 @@ Section Service Starts
 .service-section .slick-list {
     margin: 0 -20px;
 }
-
+/*.service-section .slider-box figure{*/
+/*    !*height: 336px;*!*/
+/*}*/
 .service-section .slider-box figure img {
-    height: 336px;
+    height: 435px;
     margin-bottom: 50px;
     /*width: 263px;*/
+    width: 100%;
 }
 
 .service-title {
@@ -497,13 +500,25 @@ Section Service Starts
     letter-spacing: 0;
     text-align: center;
 }
-
+.service-section .slider-arrow-box{
+    display: none;
+}
 .service-section .slider-arrow-box .next {
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 60px;
     width: 24px;
     height: 46px;
+}
+@media (min-width: 992px) {
+    .service-section .slider-box figure img {
+        height: 336px;
+    }
+}
+@media (min-width: 1368px) {
+    .service-section .slider-arrow-box{
+        display: inline-block;
+    }
 }
 
 /**======================
