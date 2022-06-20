@@ -29,8 +29,9 @@ get_header();
                         <h2 class="section-title featured-service--title">
                             Featured Project
                         </h2>
-                        <figure class="featured-section--image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service_inner.png" alt="featured project">
+                        <figure class="featured-section--image-container">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services/service_inner.png" alt="featured project"
+                            class="img-fluid cover-image">
                         </figure>
                         <h2 class="featured-service--subtitle">Fitzgerald Avenue, Maroubra, Concrete Road reconstruction</h2>
                     </div>

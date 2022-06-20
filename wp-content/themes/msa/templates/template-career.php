@@ -20,18 +20,15 @@ $image = get_field('custom_thumbnail', $post_id);
         //  Section Hero End
 
         ?>
-        <section class="career-section ks-spt">
+        <section class="career-section ks-spt ks-spb">
             <div class="container">
                 <div class="career-flex">
-                    <div class="career--flex-item">
-                        <figure class="mb-0 career--image">
-                            <img class="cover-image" src="<?php echo $image['url']; ?>" alt="image">
-                        </figure>
-                    </div>
-                    <div class="career--flex-item">
-                        <div class="career--text">
-                            <?php echo $post_body; ?>
-                        </div>
+                    <figure class="mb-0 career--image-container career--flex-item">
+                        <img class="cover-image img-fluid" src="<?php echo $image['url'] ?>" alt="image">
+                    </figure>
+
+                    <div class="career--text career--flex-item">
+                        <?php echo $post_body ?>
                     </div>
                 </div>
             </div>

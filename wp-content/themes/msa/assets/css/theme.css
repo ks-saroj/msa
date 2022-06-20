@@ -918,112 +918,117 @@ footer .footer-logo {
 /*****************************
   About Inner Content Starts
 ******************************/
-#page-about .partner-section {
-    padding-bottom: 0;
-}
-
-.about-content:not(:first-child) {
+.about-content-flex:not(:first-child) {
     padding-top: 60px;
 }
 
-.about-content {
+.about-content-flex {
     display: flex;
     justify-content: space-between;
     column-gap: 60px;
     row-gap: 30px;
+    flex-wrap: wrap;
 }
 
-.about-content.reverse {
+.about-content-flex.reverse {
     flex-direction: row-reverse;
 }
 
 .about-content--text {
     text-align: justify;
-    flex: 1;
+    line-height: 26px;
 }
 
-.about-content--image {
-    flex: 1;
+.about-content--image-container {
+    width: 100%;
+    max-height: unset;
+    min-height: unset;
+    height: 418px;
 }
 
 .about-content--text p {
     margin-bottom: 30px;
-    line-height: 26px;
 }
 
 .about-content--text p:last-child {
     margin-bottom: 0;
 }
 
-.about-content--image img {
+.about-content--image-container img {
     height: 100%;
     width: 100%;
 }
 
+@media (min-width: 768px) {
+    .about-content-flex{
+        flex-wrap: nowrap;
+    }
+    .about-content--flex-item{
+        flex: 1;
+    }
+
+    .about-content--image-container{
+        max-height: 940px;
+        min-height: 494px;
+        height: 100%;
+    }
+}
+
 /*****************************
-  About Inner mission Starts
+  About Inner Objective Starts
 ******************************/
-.mission-flex {
+.objective-section .single-objective:not(:first-child) h2{
+    margin-top: 60px;
+}
+.objective-flex {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     column-gap: 60px;
     row-gap: 30px;
+    flex-wrap: wrap;
 }
 
-.mission-flex--item {
-    flex: 1;
-
+.objective-flex.reverse{
+    flex-direction: row-reverse;
 }
 
-.mission--text p {
+
+.objective--text p {
     margin-bottom: 30px;
     line-height: 26px;
     text-align: justify;
 }
 
-.mission--text p:last-child {
+.objective--text p:last-child {
     margin-bottom: 0;
 }
 
-.mission-image img {
+.objective--image-container{
+    width: 100%;
+    max-height: unset;
+    min-height: unset;
+    height: 393px;
+}
+
+.objective--image-container img {
     height: 100%;
     width: 100%;
 }
 
-/*****************************
-  About Inner value Starts
-******************************/
-.value-section {
-    padding-top: 60px;
-}
+@media (min-width: 768px) {
+    .objective-flex{
+        flex-wrap: nowrap;
+    }
+    .objective-flex--item {
+        flex: 1;
+    }
 
-.value-flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    column-gap: 60px;
-    row-gap: 30px;
-}
-
-.value-flex--item {
-    flex: 1;
-
-}
-
-.value--text p {
-    margin-bottom: 30px;
-    line-height: 26px;
-    text-align: justify;
-}
-
-.value--text p:last-child {
-    margin-bottom: 0;
-}
-
-.value-image img {
-    height: 100%;
-    width: 100%;
+    .objective--image-container{
+        max-height: 940px;
+        min-height: 265px;
+        height: 100%;
+    }
 }
 
 /*****************************
@@ -1130,12 +1135,15 @@ footer .footer-logo {
 }
 
 /*****************************
-  Content Service Starts
+  Featured Service Starts
 ******************************/
-.featured-service--flex {
+.featured-service--flex{
     display: flex;
     column-gap: 60px;
+    row-gap: 40px;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
 }
 
 .featured-service--text {
@@ -1149,8 +1157,14 @@ footer .footer-logo {
     font-size: 32px;
 }
 
-.featured-section--image {
+.featured-section--image-container {
     margin-bottom: 30px;
+    height: 287px;
+}
+
+.featured-section--image-container img {
+    width: 100%;
+    height: 100%;
 }
 
 .featured-service--subtitle {
@@ -1158,6 +1172,23 @@ footer .footer-logo {
     font-weight: 700;
     line-height: 26px;
     margin-bottom: 0;
+}
+.featured-service-section  .ks-btn{
+    white-space: normal;
+}
+@media (min-width: 768px) {
+    .featured-service--flex{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .featured-service--item{
+        flex: 1;
+    }
+    .featured-section--image-container {
+        height: unset;
+        min-height: 287px;
+        max-height: 600px;
+    }
 }
 
 /*****************************
@@ -1199,20 +1230,17 @@ footer .footer-logo {
 .career-section {
     margin-top: 20px;
 }
-
 .career-flex {
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    flex-wrap: wrap;
 }
-
-.career--flex-item {
-    flex: 1;
+.career--image-container{
+    width: 100%;
 }
-
-.career--image,
-.career--image img {
-    height: 100%;
+.career--image-container img{
+    height: 450px;
     width: 100%;
 }
 
@@ -1227,6 +1255,21 @@ footer .footer-logo {
 
 .career--text p:last-child {
     margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .career-flex{
+        flex-wrap: nowrap;
+    }
+    .career--flex-item {
+        flex: 1;
+    }
+    .career--image-container img{
+        height: 100%;
+        min-height: 400px;
+        max-height: 863px;
+    }
+
 }
 
 /*****************************
@@ -1253,4 +1296,59 @@ footer .footer-logo {
 
 .contact-page .contact-grid .left-col p {
     margin-bottom: 0;
+}
+/*****************************
+  Project Inner Top Slider
+******************************/
+.project-slider--container{
+    margin-bottom: 60px;
+    position: relative;
+}
+.arrows.left.prev3,
+.arrows.right.next3{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrows.left.prev3 img,
+.arrows.right.next3 img
+{
+    height: 46px;
+}
+.arrows.left.prev3{
+    left: -100px;
+
+}
+.arrows.right.next3{
+    right: -100px;
+}
+.project-slider--image-container {
+    max-height: 515px;
+}
+.project-slider--image-container img{
+    width: 100%;
+    height: 100%;
+}
+/*****************************
+  Project Inner Content
+******************************/
+.project-content-flex{
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+.single-project--flex-item{
+    flex: 1;
+}
+.single-project--subtitle{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 15px;
+}
+p.single-project--text{
+    margin-bottom: 0;
+    line-height: 26px;
+    text-align: justify;
 }
