@@ -46,7 +46,7 @@
                         <span class="fa fa-bars icon"></span>
                     </div>
                 </div>
-                <div class="col-lg-10 px-lg-0">
+                <div class="col-lg-10 xpx-lg-0">
                     <div class="row">
                         <div class="col-lg-12 navigation ml-auto">
                             <?php

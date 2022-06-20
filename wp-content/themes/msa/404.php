@@ -12,12 +12,16 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'msa' ); ?></h1>
-			</header><!-- .page-header -->
+        <?php
+        //  Section Hero Start
+        get_template_part( 'template-parts/section', 'hero' );
+        //  Section Hero End
+        ?>
 
-			<div class="page-content">
+		<section class="error-404 not-found ks-spt ks-spb">
+
+
+			<div class="page-content container">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'msa' ); ?></p>
 
 					<?php
@@ -44,11 +48,11 @@ get_header();
 					</div><!-- .widget -->
 
 					<?php
-					/* translators: %1$s: smiley */
-					$msa_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'msa' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$msa_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
+//					/* translators: %1$s: smiley */
+//					$msa_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'msa' ), convert_smilies( ':)' ) ) . '</p>';
+//					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$msa_archive_content" );
+//
+//					the_widget( 'WP_Widget_Tag_Cloud' );
 					?>
 
 			</div><!-- .page-content -->
