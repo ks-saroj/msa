@@ -12,22 +12,18 @@
     color: inherit;
     opacity: 1;
 }
-
 :-ms-input-placeholder {
     color: inherit;
     opacity: 1;
 }
-
 ::placeholder {
     color: inherit;
     opacity: 1;
 }
-
 html,
 body {
     height: 100%;
 }
-
 .primary-btn {
     position: relative;
     display: inline-block;
@@ -47,54 +43,43 @@ body {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-
 .ks-smt {
     margin-top: 100px;
 }
 .ks-smb {
     margin-bottom: 100px;
 }
-
 .ks-spt {
     padding-top: 100px;
 }
-
 .ks-spb {
     padding-bottom: 100px;
 }
-
 .ks-font-merriweather {
     font-family: "Merriweather", serif;
 }
-
 .primary-btn span {
     display: inline-block;
     vertical-align: middle;
     margin: 0 0 0 10px;
 }
-
 .primary-link-color {
     color: #0E1164;
 }
-
 .light-blue {
     color: #19647E;
 }
-
 .dark-blue {
     color: #0E1164 !important;
 }
-
 .container {
     width: 100%;
     max-width: 1170px;
 }
-
 img.cover-image {
     object-fit: cover;
     object-position: center;
 }
-
 .ks-btn {
     padding: 10px 40px;
     font-weight: 700;
@@ -107,22 +92,18 @@ img.cover-image {
     display: inline-flex;
     justify-content: center;
 }
-
 .ks-btn-light {
     background: #ffffff;
     color: #000000;
 }
-
 .ks-btn-light:hover {
     color: #000000;
     text-decoration: none;
 }
-
 .ks-btn-dark {
     background: #000000;
     color: #ffffff;
 }
-
 .arrow-light:after {
     content: url(../images/arrow-right-light.png);
     margin-left: 15px;
@@ -130,19 +111,22 @@ img.cover-image {
     display: inline-block;
     width: 15px;
 }
-
 .section-title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 44px;
     text-align: left;
     margin-bottom: 60px;
 }
-
 .section-subtitle {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 30px;
+}
+@media (min-width: 768px){
+    .section-title{
+        font-size: 36px;
+    }
 }
 
 /**======================
@@ -515,7 +499,7 @@ Section Service Starts
         height: 336px;
     }
 }
-@media (min-width: 1368px) {
+@media (min-width: 768px) {
     .service-section .slider-arrow-box{
         display: inline-block;
     }
@@ -527,11 +511,9 @@ Section About Starts
 .about-section {
     background: rgba(0, 0, 0, 0.5);
 }
-
 .about-section .section-title {
     margin-bottom: 30px;
 }
-
 .horizontal-title-bar:after {
     content: '';
     height: 5px;
@@ -542,18 +524,16 @@ Section About Starts
     margin-right: 17px;
     margin-bottom: 30px;
 }
-
 .about-grid-container .left-grid img {
     border: 8px solid #000000;
     border-right: 0;
     border-bottom: 0;
     /*border-image: linear-gradient(to right, #000 68%, transparent 32%) 100% 1;*/
 }
-
 .about-grid-container .right-grid {
     color: #ffffff;
+    padding-top: 30px;
 }
-
 @media (min-width: 768px) {
     .about-section .about-grid-container {
         display: grid;
