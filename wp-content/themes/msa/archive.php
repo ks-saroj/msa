@@ -12,20 +12,20 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+        <?php
+
+        //  Section Hero Start
+            get_template_part( 'template-parts/section', 'hero' );
+        //  Section Hero End
+        ?>
+
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
 			<?php
+
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
@@ -47,5 +47,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

@@ -24,7 +24,7 @@ if ($the_query->have_posts()) :
               <a href="<?php the_permalink(); ?>">  <figure>
                     <img class="img-fluid cover-image" src="<?php echo $custom_thumbnail['url']; ?>" alt="Service 1">
                 </figure></a>
-                <a href="<?php the_permalink(); ?>"><h3 class="project-title"><?php echo the_title(); ?></h3></a>
+                <a class="no-decoration" href="<?php the_permalink(); ?>"><h3 class="project-title"><?php echo the_title(); ?></h3></a>
             </div>
             <?php
             endwhile;

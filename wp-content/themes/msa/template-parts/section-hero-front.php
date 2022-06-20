@@ -21,22 +21,17 @@ $vimeo_video_link = get_field('vimeo_video_link');
 if (is_front_page() && $video_id != ''):
     ?>
     <section class="hero-section <?php echo $section_class; ?>">
-        <div id="hero-section-overlay"></div>
-        <div class="embed-responsive embed-responsive-16by9 d-none d-sm-block">
-            <iframe
-                    src="https://player.vimeo.com/video/<?php echo $video_id ?>?background=1&autoplay=1&amp;modestbranding=1&amp;showinfo=0"
-                    frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowfullscreen
-            ></iframe>
-
-            <!--        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-->
-            <?php //echo $video_id
-            ?><!--?rel=1&autoplay=1&mute=1&controls=0&title=0&loop=1&playlist=--><?php //echo $video_id
-            ?><!--" frameborder="0" allowfullscreen></iframe>-->
-        </div>
+<!--        <div class="embed-responsive embed-responsive-16by9 desktop-video">-->
+<!--            <iframe-->
+<!--                    src="https://player.vimeo.com/video/--><?php //echo $video_id ?><!--?background=1&autoplay=1&amp;modestbranding=1&amp;showinfo=0"-->
+<!--                    frameborder="0"-->
+<!--                    allow="autoplay; fullscreen; picture-in-picture"-->
+<!--                    allowfullscreen-->
+<!--            ></iframe>-->
+<!--        </div>-->
         <!-- full screen video on mobile starts-->
-        <div class="full-video-div d-sm-none">
+        <div class="full-video-div mobile-video">
+            <div id="hero-section-overlay"></div>
             <video preload="auto" autoplay="" loop="" muted="" playsinine="" playsinline="">
                 <source src="<?php echo $vimeo_video_link; ?>" type="video/mp4">
             </video>
@@ -46,18 +41,11 @@ if (is_front_page() && $video_id != ''):
         <div class="hero-section-text">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-lg-8 col-12">
                         <div data-aos="fade-down" data-aos-duration="800" class="left-box aos-init aos-animate">
                             <h2 class="hero-section-title">
                                 <?php echo htmlspecialchars_decode($page_title); ?>
                             </h2>
-                            <?php
-                            //                            if($video_type === 'vimeo'):
-                            $data_src = "https://player.vimeo.com/video/" . $video_id . "?badge=0";
-                            //                            else:
-                            //                                $data_src = "https://www.youtube.com/embed/".$video_id."?rel=1&autoplay=0&loop=1&playlist=".$video_id;
-                            //                            endif;
-                            ?>
                             <?php if ($video_button_text): ?>
                                 <a href="#" class="primary-btn video-btn" data-toggle="modal"
                                    data-src="<?php echo $data_src; ?>">

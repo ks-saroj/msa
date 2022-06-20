@@ -8,33 +8,28 @@
  */
 
 ?>
-
+<div class="container mt-5">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<!--	<header class="entry-header">-->
-<!--		--><?php
-//		if ( is_singular() ) :
-//			the_title( '<h1 class="entry-title">', '</h1>' );
-//		else :
-//			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-//		endif;
-//
-//		if ( 'post' === get_post_type() ) :
-//			?>
-<!--			<div class="entry-meta">-->
-<!--				--><?php
-//				msa_posted_on();
-//				msa_posted_by();
-//				?>
-<!--			</div>-->
-<!--		--><?php //endif; ?>
-<!--	</header>-->
-    <!-- .entry-header -->
+	<div class="entry-header">
+		<?php
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
 
-    <?php
-    //  Section Hero Start
-    get_template_part( 'template-parts/section', 'hero' );
-    //  Section Hero End
-    ?>
+		if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<?php
+				msa_posted_on();
+				msa_posted_by();
+				?>
+			</div>
+		<?php endif; ?>
+	</div>
+
+
 
 	<?php msa_post_thumbnail(); ?>
     <div class="container pt-5">
@@ -62,3 +57,4 @@
     </div>
 
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>
