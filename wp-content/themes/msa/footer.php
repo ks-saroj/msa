@@ -10,8 +10,6 @@
  */
 
 ?>
-<<<<<<< HEAD
-
 <!--    <section class="top-footer section-padding-top">-->
 <!--        <div class="container">-->
 <!--            <div class="row">-->
