@@ -24,19 +24,19 @@ $image = get_field('image', $post_id);
         <div class="sustainability-section ks-spt ks-spb">
             <div class="container">
                 <div class="sustainability--top-flex">
-                    <div class="sustainability--top-flex-item">
+                    <div class="sustainability--top-flex-item sustainability--top-flex-text-container">
                         <h2 class="section-title sustainability--title"><?php echo $post_title ?></h2>
                         <p class="sustainability--subtitle"><?php echo $post_body ?></p>
                     </div>
-                    <figure class="sustainability--top-flex-item mb-0">
-                        <img src="<?php  echo $image['url'] ?>" class="cover-image" alt="sustainability image"/>
+                    <figure class="sustainability--top-flex-item mb-0 sustainability--top-flex-image-container">
+                        <img src="<?php  echo $image['url'] ?>" class="cover-image img-fluid" alt="sustainability image"/>
                     </figure>
                 </div>
                 <div class="sustainability--bottom-flex">
-                    <figure class="sustainability--bottom-flex-item mb-0">
-                        <img src="<?php echo $certificate ?>" class="cover-image" alt="sustainability image"/>
+                    <figure class="sustainability--bottom-flex-item mb-0 sustainability--bottom-flex-image-container">
+                        <img src="<?php echo $certificate ?>" class="cover-image img-fluid" alt="sustainability image"/>
                     </figure>
-                    <div class="sustainability--bottom-flex-item">
+                    <div class="sustainability--bottom-flex-item sustainability--bottom-flex-text-container">
                         <?php foreach($sustainability_contents as $sustainability_content): ?>
                         <div>
                             <h2 class="section-title sustainability--title"><?php echo $sustainability_content['content_title'] ?></h2>
