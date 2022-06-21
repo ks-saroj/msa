@@ -159,7 +159,7 @@
 		mobileFirst: true,
 		responsive: [
 			{
-				breakpoint: 1418,
+				breakpoint: 1200,
 				settings: {
 					arrows:  true
 				},
