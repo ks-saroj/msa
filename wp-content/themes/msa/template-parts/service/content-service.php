@@ -1,45 +1,41 @@
 <?php
 $featured_projects = get_field('featured_project');
 ?>
-<section class="services-section-one section-padding-top">
+<div class="featured-service-section ks-spt">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="left-box">
-                    <div class="row">
-                        <div class="col-md-11">
-                            <h2>How we do it.</h2>
-                            <p>
-                                <?php the_content(); ?>
-                            </p>
-                        </div>
+        <div class="featured-service--flex">
+            <div class="featured-service--item">
+                <div class="featured-service--text">
+                    <div class="service-content">
+                        <?php the_content(); ?>
                     </div>
-                    <a href="#" class="primary-btn">
-                        Start A Project With Us
-                        <span class="fa fa-long-arrow-right"></span>
-                    </a>
+                    <div class="start-project-btn">
+                        <button class="ks-btn ks-btn-dark mt-4">
+                            <span class="arrow-light"> Start A Project With Us</span>
+                        </button>
+                    </div>
                 </div>
+
             </div>
             <?php if( $featured_projects ): ?>
-            <div class="col-md-6">
-                <h2>Featured Project<h2>
-                <?php
-                foreach( $featured_projects as $post ):
-                // Setup this post for WP functions (variable must be named $post).
-                setup_postdata($post);
-                $project_thumbnail = get_field('custom_thumbnail',$post);
-                ?>
-                <div class="row">
-                    <div class="col-md-12 single-featured-project">
-                        <div class="image-box">
-                            <img src="<?php echo $project_thumbnail['url'] ?>" class="img-fluid" alt="" />
-                        </div>
-                        <a class="text-decoration-none" href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-                    </div>
+                <div class="featured-service--item">
+                    <h2 class="section-title featured-service--title">
+                        Featured Project
+                    </h2>
+                    <?php
+                    foreach( $featured_projects as $post ):
+                        // Setup this post for WP functions (variable must be named $post).
+                        setup_postdata($post);
+                        $project_thumbnail = get_field('custom_thumbnail',$post);
+                        ?>
+                        <a href="<?php the_permalink(); ?>">  <figure class="featured-section--image-container">
+                                <img src="<?php echo $project_thumbnail['url'] ?>" alt="featured project"
+                                     class="img-fluid cover-image">
+                            </figure></a>
+                        <a href="<?php the_permalink(); ?>">  <h2 class="featured-service--subtitle"><?php the_title(); ?></h2></a>
+                    <?php endforeach ?>
                 </div>
-                <?php endforeach; ?>
-            </div>
-            <?php endif; ?>
+            <?php endif ?>
         </div>
     </div>
-</section>
+</div>
