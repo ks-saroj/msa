@@ -1486,7 +1486,7 @@ footer .footer-logo {
         height: 515px;
     }
 }
-@media (min-width: 1418px) {
+@media (min-width: 1200px) {
     .arrows.left.prev3,
     .arrows.right.next3
     {
