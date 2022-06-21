@@ -8,12 +8,12 @@
  */
 
 ?>
-<div class="container mt-5">
+<div class="container">
 <article id="post-<?php the_ID(); ?>" <?php post_class('ks-spb ks-spt'); ?>>
 
-    <div class="container pt-5">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-justify">
                     <?php
                     the_content(
                         sprintf(
