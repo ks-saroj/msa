@@ -750,6 +750,13 @@ Section Blog Starts
 
 .blog-section .blog-box figure {
     margin-bottom: 30px;
+    height: 432px;
+    width: 100%;
+}
+
+.blog-section .blog-box figure img{
+    height: 100%;
+    width: 100%;
 }
 
 .blog-section .blog-box a,
@@ -761,6 +768,7 @@ Section Blog Starts
     .blog-grid{
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 /**======================
@@ -1434,6 +1442,7 @@ footer .footer-logo {
     top: 50%;
     transform: translateY(-50%);
     display: none;
+    cursor: pointer;
 }
 .arrows.left.prev3 img,
 .arrows.right.next3 img
@@ -1480,16 +1489,16 @@ footer .footer-logo {
     line-height: 39px;
     margin-bottom: 15px;
 }
-p.single-project--text,
-ul.single-project--text{
+.single-project--text{
     margin-bottom: 0;
     line-height: 26px;
     text-align: justify;
 }
-ul.single-project--text{
+.single-project--text ul{
     padding-left: 20px;
+    margin-bottom: 0;
 }
-ul.single-project--text li{
+.single-project--text ul li{
     list-style: disc;
 }
 
