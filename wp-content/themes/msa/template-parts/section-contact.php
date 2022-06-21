@@ -6,7 +6,7 @@
                     <div class="single-contact-box">
                         <h2 class="contact-topic-title">Head Office</h2>
                         <p>
-                            <?php echo nl2br(htmlspecialchars_decode(get_option('msa_head_office'))); ?>
+                           <?php echo nl2br(htmlspecialchars_decode(get_option('msa_head_office'))); ?>
                         </p>
                     </div>
                     <div class="single-contact-box">
@@ -18,14 +18,14 @@
                     <div class="single-contact-box">
                         <h2 class="contact-topic-title">Phone</h2>
                         <p>
-                            <?php echo htmlspecialchars_decode(get_option('msa_contact')); ?>
+                          <a class="no-decoration" href="tel:<?php echo htmlspecialchars_decode(get_option('msa_contact')); ?>"> <?php echo htmlspecialchars_decode(get_option('msa_contact')); ?></a>
 
                         </p>
                     </div>
                     <div class="single-contact-box">
                         <h2 class="contact-topic-title">Email</h2>
                         <p>
-                          <?php echo nl2br(htmlspecialchars_decode(get_option('msa_contact_email'))); ?>
+                        <a class="no-decoration" href="mailto:<?php echo nl2br(htmlspecialchars_decode(get_option('msa_contact_email'))); ?>"> <?php echo nl2br(htmlspecialchars_decode(get_option('msa_contact_email'))); ?></a>
 
                         </p>
                     </div>

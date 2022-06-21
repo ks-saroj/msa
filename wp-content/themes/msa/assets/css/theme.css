@@ -172,13 +172,13 @@ header {
     top: 0;
     right: 0;
 }
-
+.single-projects header#masthead,
 header#masthead.scrolled-navbar {
     background: #ffffff;
     /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+.single-projects .navigation nav ul li a,
 #masthead.scrolled-navbar .navigation nav ul li a {
     color: #000000;
 }
@@ -1113,6 +1113,11 @@ footer .footer-logo {
         gap: 30px;
     }
 }
+@media (min-width: 768px) {
+    .archive-service{
+        padding-bottom: 100px;
+    }
+}
 @media (min-width: 1024px) {
     .service-box-container {
         grid-template-columns: repeat(6, 1fr);
@@ -1122,6 +1127,7 @@ footer .footer-logo {
         grid-column: span 3;
     }
 }
+
 /*****************************
   Archive Project Starts
 ******************************/

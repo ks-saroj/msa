@@ -18,8 +18,8 @@ $project_gallery = CFS()->get('gallery');
         // Content Service Starts
         ?>
 
-        <!--        Featured Project    -->
-        <section class="project-section ks-smb ks-smt">
+<!--        Featured Project    -->
+        <section class="project-section ks-smb ks-smt ks-spt">
             <div class="container">
                 <h2 class="section-title">Chapel Rd, Bankstown, St. Felix Primary School, New Pedestrian Crossing</h2>
                 <div class="project-slider--container">

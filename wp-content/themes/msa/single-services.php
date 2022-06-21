@@ -19,8 +19,9 @@ $featured_projects = get_field('featured_project');
             <div class="container">
                 <div class="featured-service--flex">
                     <div class="featured-service--item">
-                        <p class="featured-service--text">
-                            <?php the_content(); ?>      </p>
+                        <div class="featured-service--text">
+                                <?php the_content(); ?>
+                        </div>
                         <button class="ks-btn ks-btn-dark">
                             <span class="arrow-light"> Start A Project With Us</span>
                         </button>
