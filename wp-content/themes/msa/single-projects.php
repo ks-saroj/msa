@@ -49,16 +49,17 @@ $project_gallery = CFS()->get('gallery');
                         <h2 class="single-project--subtitle">
                             OverView:
                         </h2>
-                        <p class="single-project--text">
-                            <?php echo nl2br(htmlspecialchars_decode($overview)); ?>                        </p>
+                        <div class="single-project--text">
+                            <?php echo nl2br(htmlspecialchars_decode($overview)); ?>
+                        </div>
                     </div>
                     <div class="single-project--flex-item">
                         <h2 class="single-project--subtitle">
                             Scope of Works
                         </h2>
-                        <p class="single-project--text">
-                            <?php echo (htmlspecialchars_decode($scope_of_works)); ?>
-                        </p>
+                        <div class="single-project--text">
+                            <?php echo htmlspecialchars_decode($scope_of_works); ?>
+                        </div>
                     </div>
                     <div class="single-project--flex-item">
                         <h2 class="single-project--subtitle">
