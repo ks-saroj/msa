@@ -1,3 +1,8 @@
+<?php
+$post_id = getIdBySlug('section-about','sections');
+$content = get_post_field('post_content', $post_id);
+$section_title = get_field('section_title',$post_id);
+//?>
 <section class="about-section ks-spb ks-spt">
     <div class="container">
         <div class="about-grid-container">
@@ -8,9 +13,9 @@
             </div>
             <div class="right-grid">
                 <span class="horizontal-title-bar"></span>
-                <h2 class="section-title">About MSA Civil and Communications</h2>
+                <h2 class="section-title"><?php echo $section_title; ?></h2>
                 <p>
-                    MSA Civil and Communications Pty Ltd is an Australian owned Civil engineering company founded in 2011. Since then, the company has grown to become one of the most respected civil engineering companies in Sydney with over 50+ employees.  Our speciality is technical urban projects. With a range of skilled personnel and specialised plant, we have the flexibility, knowledge, and depth to deliver complex infrastructure projects and react quickly to changes in scope.
+                 <?php  echo htmlspecialchars_decode($content) ?>
                 </p>
             </div>
         </div>
