@@ -1229,6 +1229,11 @@ footer .footer-logo {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+@media (max-width: 767px) {
+    .archive-project .ks-spb{
+        padding-bottom: 0;
+    }
+}
 /*****************************
   Featured Service Starts
 ******************************/
