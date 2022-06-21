@@ -57,7 +57,7 @@ $project_gallery = CFS()->get('gallery');
                             Scope of Works
                         </h2>
                         <p class="single-project--text">
-                            <?php echo htmlspecialchars_decode($scope_of_works); ?>
+                            <?php echo (htmlspecialchars_decode($scope_of_works)); ?>
                         </p>
                     </div>
                     <div class="single-project--flex-item">
