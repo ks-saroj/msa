@@ -14,9 +14,7 @@ $section_title = get_field('section_title',$post_id);
             <div class="right-grid">
                 <span class="horizontal-title-bar"></span>
                 <h2 class="section-title"><?php echo $section_title; ?></h2>
-                <p>
                  <?php  echo htmlspecialchars_decode($content) ?>
-                </p>
             </div>
         </div>
     </div>
