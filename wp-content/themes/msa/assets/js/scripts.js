@@ -148,13 +148,23 @@
 	jQuery("#project-slider").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: true,
+		arrows: false,
 		dots: false,
 		infinite: true,
 		speed: 1000,
-		autoplay: false,
+		autoplay: true,
+		autoplaySpeed: 1000,
 		prevArrow: $(".prev3"),
 		nextArrow: $(".next3"),
+		mobileFirst: true,
+		responsive: [
+			{
+				breakpoint: 1418,
+				settings: {
+					arrows:  true
+				},
+			},
+		]
 	});
 	//inner project slider ends
 
