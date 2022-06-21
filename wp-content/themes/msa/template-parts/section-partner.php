@@ -7,7 +7,7 @@ $section_subtitle = get_field('section_subtitle',$post_id);
 <section class="partner-section ks-spb ks-spt">
     <div class="container">
         <h2 class="section-title"><?php echo $section_title; ?></h2>
-        <p class="section-subtitle"><?php echo $section_title; ?></p>
+        <p class="section-subtitle"><?php echo $section_subtitle; ?></p>
         <div class="partner-slider">
             <?php foreach($partners as $partner): ?>
             <div class="slider-box">
