@@ -8,7 +8,7 @@ $button_text = get_field('section_button_text',$post_id);
     <div class="container h-100">
         <div class="emergency-text-container">
             <h2 class="emergency-text"> <?php  echo htmlspecialchars_decode($content) ?></h2>
-            <a href="#" class="ks-btn ks-btn-light">
+            <a href="tel:<?php echo $button_text ?>" class="ks-btn ks-btn-light">
                 <span><?php echo $button_text ?></span>
             </a>
         </div>

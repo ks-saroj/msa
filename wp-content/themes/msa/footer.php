@@ -71,11 +71,21 @@ get_template_part( 'template-parts/section-sticky-form' );
         <div class="container">
             <div class="bottom-footer-grid">
                 <div class="left-col">
-                    <p>Copyright <?php echo date('Y') . ' ' . get_bloginfo('name'); ?> &nbsp; | &nbsp; <a
-                                href="https://msa.themarketingco-staging.com/privacy-policy/">Privacy Policy</a> &nbsp;
-                        |
-                        &nbsp;
-                        <a href="https://msa.themarketingco-staging.com/terms-and-conditions/">Terms & Conditions</a>
+                    <p>Copyright <?php echo date('Y') . ' ' . get_bloginfo('name'); ?> &nbsp; | &nbsp;
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location'    => 'footer-menu',
+                            'menu_class'        => 'footer-navigation',
+                            'menu_id'           => 'footer-navigation',
+//                            'container'         => 'nav',
+                            'depth'             => 3,
+                        ) );
+                        ?>
+<!--                        <a-->
+<!--                                href="https://msa.themarketingco-staging.com/privacy-policy/">Privacy Policy</a> &nbsp;-->
+<!--                        |-->
+<!--                        &nbsp;-->
+<!--                        <a href="https://msa.themarketingco-staging.com/terms-and-conditions/">Terms & Conditions</a>-->
                     </p>
                 </div>
                 <div class="right-col">
