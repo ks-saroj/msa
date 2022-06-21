@@ -603,7 +603,7 @@ Section About Starts
     border: 8px solid #000000;
     border-right: 0;
     border-bottom: 0;
-    /*border-image: linear-gradient(to right, #000 68%, transparent 32%) 100% 1;*/
+    border-image: linear-gradient(to right, #000 68%, transparent 32%) 1;
 }
 
 .about-grid-container .right-grid {
@@ -1293,7 +1293,6 @@ footer .footer-logo {
         display: flex;
         flex-direction: column;
         padding-bottom: 60px;
-    }
     }
     .featured-section--image-container {
         height: unset;
