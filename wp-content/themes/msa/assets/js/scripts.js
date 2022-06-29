@@ -50,7 +50,7 @@
 
 	//partner-logo slider (partnership slider) starts
 	jQuery(".partner-slider").slick({
-		speed: 5000,
+		speed: 2000,
 		autoplay: true,
 		autoplaySpeed: 0,
 		draggable: true,

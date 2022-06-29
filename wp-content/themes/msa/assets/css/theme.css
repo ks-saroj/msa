@@ -477,7 +477,7 @@ Hero Section Starts
 Section Emergency Starts
 =========================*/
 .emergency-section {
-    background-image: url("../images/emergency-bg.png");
+    /*background-image: url("../images/emergency-bg.png");*/
     background-size: cover;
     background-repeat: no-repeat;
     height: 480px;
@@ -1665,3 +1665,21 @@ footer .footer-logo {
 .ks-sticky-form.contact-form .wpcf7-not-valid-tip {
     font-size: 12px;
 }
+.about-read-more-btn button{
+    color: #000000;
+    background: #ffffff;
+    padding: 10px 40px;
+    font-weight: 700;
+    font-size: 18px;
+    /* border-radius: 50px; */
+    /* min-width: 230px; */
+    line-height: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+}
+@media (min-width: 768px){
+    .about-read-more-btn{
+        text-align: right;
+    } }

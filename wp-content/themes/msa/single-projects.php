@@ -21,7 +21,7 @@ $project_gallery = CFS()->get('gallery');
 <!--        Featured Project    -->
         <section class="project-section ks-smb ks-smt ks-spt">
             <div class="container">
-                <h2 class="section-title">Chapel Rd, Bankstown, St. Felix Primary School, New Pedestrian Crossing</h2>
+                <h2 class="section-title"><?php echo single_post_title()?></h2>
                 <div class="project-slider--container">
                     <div class="arrows left prev3"><img
                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/angle-left.png"

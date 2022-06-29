@@ -21,15 +21,15 @@ if ($the_query->have_posts()) :
             $custom_thumbnail = get_field('custom_thumbnail');
             ?>
             <div class="blog-box">
-                <a href="<?php the_permalink(); ?>">
+<!--                <a href="--><?php //the_permalink(); ?><!--">-->
                     <figure>
                         <img src="<?php echo $custom_thumbnail['url']; ?>"
                              class="img-fluid cover-image" alt="">
                     </figure>
-                </a>
-                <a href="<?php the_permalink(); ?>">
+<!--                </a>-->
+<!--                <a href="--><?php //the_permalink(); ?><!--">-->
                     <h3 class="post-title"><?php echo the_title(); ?></h3>
-                </a>
+<!--                </a>-->
             </div>
             <?php
             endwhile;

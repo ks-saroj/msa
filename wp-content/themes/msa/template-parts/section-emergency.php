@@ -2,7 +2,13 @@
 $post_id = getIdBySlug('section-emergency','sections');
 $content = get_post_field('post_content', $post_id);
 $button_text = get_field('section_button_text',$post_id);
+$thumbnail_url = get_the_post_thumbnail_url($post_id,'full');
 //?>
+<style>
+    .emergency-section{
+        background-image: url(<?php echo $thumbnail_url; ?>);
+    }
+</style>
 <section class="emergency-section ks-smb ks-smt" >
     <div class="background-overlay"></div>
     <div class="container h-100">

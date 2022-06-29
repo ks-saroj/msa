@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="right-col contact-form">
-                    <h3 class="contact-topic-title">Start a project with us</h3>
+                    <a href="http://msa.test/contact/" class="no-decoration"><h3 class="contact-topic-title">Start A project with us</h3></a>
                     <p>
                         For general enquiries or to request a quote, fill out our online form below and one of our representatives will be in touch within 24 hours.
                     </p>

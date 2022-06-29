@@ -14,7 +14,7 @@ if ($the_query->have_posts()) :
              data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/service-bg.png"
              xstyle="background: url('<?php echo get_template_directory_uri(); ?>/assets/images/service-bg.png')">
         <div class="container">
-            <h2 class="section-title">Services</h2>
+            <a class="no-decoration" href="/our-services/"><h2 class="section-title">Services</h2></a>
 
             <div class="service-slider">
                 <?php

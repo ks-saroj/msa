@@ -11,7 +11,7 @@ $featured_projects = get_field('featured_project');
                     </div>
                     <div class="start-project-btn">
                         <button class="ks-btn ks-btn-dark mt-4">
-                            <span class="arrow-light"> Start A Project With Us</span>
+                            <a class="no-decoration" href="/contact/"><span class="arrow-light"> Start A Project With Us</span></a>
                         </button>
                     </div>
                 </div>

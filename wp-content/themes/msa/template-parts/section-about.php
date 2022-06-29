@@ -18,6 +18,11 @@ $section_title = get_field('section_title',$post_id);
                 <span class="horizontal-title-bar"></span>
                 <h2 class="section-title"><?php echo $section_title; ?></h2>
                  <?php  echo htmlspecialchars_decode($content) ?>
+                <div class="about-read-more-btn">
+                    <button class=" mt-4">
+                       <a href="/about-us/" class="no-decoration"><span> Read More</span></a>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

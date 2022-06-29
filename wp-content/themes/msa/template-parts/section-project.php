@@ -13,7 +13,7 @@ if ($the_query->have_posts()) :
 <section class="project-section ks-spt ks-spb ks-smb" data-parallax="scroll"
          data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/project-bg.png">
         <div class="container">
-        <h2 class="section-title">Portfolio</h2>
+        <a class="no-decoration" href="/our-projects/"><h2 class="section-title">Portfolio</h2> </a>
         <div class="project-slider">
             <?php
             while ( $the_query->have_posts() ) :
