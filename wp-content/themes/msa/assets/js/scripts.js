@@ -229,6 +229,19 @@
 		stickyForm.toggleClass('active');
 	});
 
+	/** project filter starts **/
+	jQuery('#projectFilter').change(function(){
+		let selectedProject = jQuery(this).val();
+		if(selectedProject !== ''){
+			jQuery('.project-box').addClass('d-none');
+			jQuery('.project-box.'+selectedProject).removeClass('d-none');
+		}else{
+			jQuery('.project-box').removeClass('d-none');
+		}
+
+	});
+	/** project filter ends **/
+
 })( jQuery );
 
 //counter starts
