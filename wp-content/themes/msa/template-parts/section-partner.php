@@ -12,7 +12,7 @@ $section_subtitle = get_field('section_subtitle',$post_id);
             <?php foreach($partners as $partner): ?>
             <div class="slider-box">
                 <figure>
-                    <img class="img-fluid cover-image" src="<?php echo $partner['image']; ?>" alt="Partner">
+                    <img class="img-fluid contain-image" src="<?php echo $partner['image']; ?>" alt="Partner">
                 </figure>
             </div>
             <?php
