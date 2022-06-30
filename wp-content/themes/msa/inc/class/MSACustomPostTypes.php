@@ -159,6 +159,7 @@ class MSACustomPostTypes
             'menu_position'       => 20,
             'can_export'          => true,
             'has_archive'         => false,
+            'taxonomies'          => ['post_tag'],
             'exclude_from_search' => false,
             'publicly_queryable'  => true,
             'capability_type'     => 'post',
