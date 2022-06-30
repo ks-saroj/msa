@@ -12,8 +12,6 @@ get_header();
         get_template_part( 'template-parts/service/content-service' );
         // Content Service End
 ?>
-
-
         <?php
         // Section Partner Starts
         get_template_part( 'template-parts/section', 'partner' );
