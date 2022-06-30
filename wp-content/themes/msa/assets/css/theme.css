@@ -95,7 +95,10 @@ img.cover-image {
     object-fit: cover;
     object-position: center;
 }
-
+img.contain-image {
+    object-fit: contain;
+    object-position: center;
+}
 .ks-btn {
     padding: 10px 40px;
     font-weight: 700;
@@ -534,7 +537,7 @@ Section Service Starts
 /*}*/
 .service-section .slider-box figure img {
     height: 435px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     /*width: 263px;*/
     width: 100%;
 }
@@ -545,6 +548,8 @@ Section Service Starts
     line-height: 29px;
     letter-spacing: 0;
     text-align: center;
+    background-color: #ffffff;
+    padding: 25px 15px;
 }
 
 .service-section .slider-arrow-box {
@@ -610,7 +615,11 @@ Section About Starts
     color: #ffffff;
     padding-top: 30px;
 }
-
+.about-grid-container .read-more{
+    display: flex;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
 @media (min-width: 768px) {
     .about-section .about-grid-container {
         display: grid;
@@ -703,7 +712,7 @@ Section Portfolio Starts
 
 .project-section .slider-box figure img {
     height: 432px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
@@ -712,6 +721,8 @@ Section Portfolio Starts
     font-weight: 700;
     line-height: 29px;
     letter-spacing: 0;
+    background-color: #ffffff;
+    padding: 25px 15px;
 }
 .project-section .slider-arrow-box {
     display: none;
@@ -1124,7 +1135,7 @@ footer .footer-logo {
     grid-column: span 2;
 }
 .service-box-container .service-box figure {
-    margin-bottom: 44px;
+    margin-bottom: 25px;
 }
 .service-box-container .service-box figure img {
     height: 460px;
@@ -1141,7 +1152,10 @@ footer .footer-logo {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    padding: 15px 17px 15px 0;
+    background-color: #ffffff;
+    display: inline-block;
 }
 @media (min-width: 640px) {
     .service-box-container {
@@ -1199,7 +1213,7 @@ footer .footer-logo {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 30px;
+    gap: 10px;
 }
 
 .project-box a {
@@ -1216,6 +1230,8 @@ footer .footer-logo {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 6px;
+    background-color: #ffffff;
+    padding: 20px 0;
 }
 @media (min-width: 640px) {
     .project-box-container {
@@ -1665,21 +1681,4 @@ footer .footer-logo {
 .ks-sticky-form.contact-form .wpcf7-not-valid-tip {
     font-size: 12px;
 }
-.about-read-more-btn button{
-    color: #000000;
-    background: #ffffff;
-    padding: 10px 40px;
-    font-weight: 700;
-    font-size: 18px;
-    /* border-radius: 50px; */
-    /* min-width: 230px; */
-    line-height: 20px;
-    text-decoration: none;
-    white-space: nowrap;
-    display: inline-flex;
-    justify-content: center;
-}
-@media (min-width: 768px){
-    .about-read-more-btn{
-        text-align: right;
-    } }
+
