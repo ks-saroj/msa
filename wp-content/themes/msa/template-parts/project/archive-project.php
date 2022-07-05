@@ -31,7 +31,7 @@ $all_terms = get_terms([
             // The Loop
             if ($the_query->have_posts()) :
                 ?>
-                <div class="project-box-container">
+                <div class="project-box-container" id="projectBoxContainer">
                     <?php
                     while ($the_query->have_posts()) :
                         $the_query->the_post();

@@ -242,6 +242,8 @@
 	});
 	/** project filter ends **/
 
+
+
 })( jQuery );
 
 //counter starts
@@ -289,3 +291,54 @@ jQuery(window).bind('scroll', function () {
 		jQuery('#masthead').removeClass('scrolled-navbar');
 	}
 });
+
+
+//scroll animation projects starts
+// When we get to within 30 pixels of the bottom of a row,
+// we show the next row:
+// const THRESHOLD = 30;
+// let s = document.getElementById('projectBoxContainer');
+// let children = s.children;
+// let bottoms = [];
+// let scrollHeight;
+// let totalHeight, heightWithoutMargins;
+// for (let i = 0; i < children.length; ++i) {
+// 	let child = children[i];
+// 	let style = child.currentStyle || window.getComputedStyle(child);
+// 	if (i === 0) {
+// 		heightWithoutMargins = parseInt(style.height) +
+// 			parseInt(style.paddingTop) +
+// 			parseInt(style.paddingBottom) +
+// 			parseInt(style.borderTop) +
+// 			parseInt(style.borderBottom);
+// 		totalHeight = heightWithoutMargins +
+// 			parseInt(style.marginTop) +
+// 			parseInt(style.marginBottom);
+// 		scrollHeight = child.offsetTop - parseInt(style.marginTop);
+// 	}
+// 	let bottom = child.offsetTop - scrollHeight + heightWithoutMargins - THRESHOLD;
+// 	bottoms.push(bottom);
+// 	if (i != 0) {
+// 		child.style.visibility = 'hidden';
+// 	}
+// }
+// s.style.height = totalHeight + 'px';
+// let currentVisible = children[0];
+// s.onscroll = function() {
+// 	let y = s.scrollTop;
+// 	// Find first visible:
+// 	let firstVisible;
+// 	for (let i = 0; i < bottoms.length; ++i) {
+// 		child = children[i];
+// 		if (y < bottoms[i]) {
+// 			firstVisible = child;
+// 			break;
+// 		}
+// 	}
+// 	if (firstVisible !== currentVisible) {
+// 		currentVisible.style.visibility = 'hidden';
+// 		currentVisible = firstVisible;
+// 		currentVisible.style.visibility = 'visible';
+// 	}
+// };
+//scroll animation projects ends

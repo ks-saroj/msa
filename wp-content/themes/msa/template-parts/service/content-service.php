@@ -16,7 +16,7 @@ $featured_projects = get_field('featured_project');
                                     <?php if ($post->post_name === 'emergency-works'): ?>
                                         Contact Us
                                     <?php else: ?>
-                                        Start A Project With Us
+                                        Start a Project With Us
                                     <?php endif; ?>
                                 </span></a>
                         </button>
