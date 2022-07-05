@@ -1212,7 +1212,7 @@ footer .footer-logo {
 .project-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -1687,54 +1687,37 @@ footer .footer-logo {
 
 
 
-#scrollbox{
+
+/**=======================
+* For a Scrollable slider
+=========================*/
+.project-box-container{
     height: 555px;
+}
+.service-box-container{
+    height: 544px;
+}
+
+.project-box-container,
+.service-box-container{
     overflow-y: scroll;
     position: relative;
     ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
-#scrollbox::-webkit-scrollbar {
+.project-box-container::-webkit-scrollbar,
+.service-box-container::-webkit-scrollbar
+{
     display: none;  /* Safari and Chrome */
 }
 
-.slide {
-    display: flex;
-    flex: 1;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-.slide img{
-    height: 427px;
-    max-width: 100%;
-}
-.slide .post-title{
-    background: transparent;
-}
-
-.project-box{
-    width: 100%;
-}
-
-
 .project-box,
-.slide-up{
+.service-box{
     opacity: 0;
-    transition: opacity 300ms ease-in;
+    transition: opacity 400ms ease-in;
 }
-
 .project-box.appear,
-.slide-up.appear{
+.service-box.appear{
     opacity: 1;
 }
 
-/*.slide-up .project-box.appear{*/
-/*    opacity: 1;*/
-/*}*/
-
-@media (min-width:768px) {
-    .slide{
-        flex-wrap: nowrap;
-    }
-
-}

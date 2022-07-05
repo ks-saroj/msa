@@ -3,6 +3,7 @@ $args = array(
     'post_status' => 'publish',
     'orderby' => 'publish_date',
     'post_type' => 'projects',
+    'tag'=> 'featured',
     'order' => 'DESC',
     'posts_per_page' => '-1',
 );

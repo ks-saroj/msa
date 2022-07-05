@@ -15,7 +15,7 @@ if ($the_query->have_posts()) :
     <section class="archive-service ks-spt zks-spb parallax-section" data-parallax="scroll"
              data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/archive-service.png">
         <div class="container">
-            <div class="service-box-container">
+            <div class="service-box-container" id="scrollBox">
                 <?php
                 while ($the_query->have_posts()) :
                     $the_query->the_post();
