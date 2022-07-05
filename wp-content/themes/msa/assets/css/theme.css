@@ -1646,6 +1646,9 @@ footer .footer-logo {
     top: 40%;
     display: block;
 }
+
+
+
 /** placeholder design for skicky form **/
 .ks-sticky-form.contact-form input,
 .ks-sticky-form.contact-form select {
@@ -1682,3 +1685,56 @@ footer .footer-logo {
     font-size: 12px;
 }
 
+
+
+#scrollbox{
+    height: 555px;
+    overflow-y: scroll;
+    position: relative;
+    ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#scrollbox::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.slide {
+    display: flex;
+    flex: 1;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.slide img{
+    height: 427px;
+    max-width: 100%;
+}
+.slide .post-title{
+    background: transparent;
+}
+
+.project-box{
+    width: 100%;
+}
+
+
+.project-box,
+.slide-up{
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+.project-box.appear,
+.slide-up.appear{
+    opacity: 1;
+}
+
+/*.slide-up .project-box.appear{*/
+/*    opacity: 1;*/
+/*}*/
+
+@media (min-width:768px) {
+    .slide{
+        flex-wrap: nowrap;
+    }
+
+}

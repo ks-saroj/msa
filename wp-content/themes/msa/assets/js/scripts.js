@@ -1,5 +1,4 @@
 (function($) {
-
 	//AOS Init starts
 	AOS.init();
 	//AOS Init ends
@@ -277,6 +276,68 @@ jQuery(window).scroll(function () {
 			counted = 1;
 		}
 	}
+
+//	 Blog slider starts here
+//
+//     var timeStart = 0;
+//
+//     function wheely(e) {
+//         var y = e.originalEvent.deltaY;
+//         var timeStop = new Date().getTime();
+//         var timeDiff = timeStop - timeStart;
+//         if (timeDiff > 200) {
+//             if (y > 0) {
+//                 nextSlide();
+//             }
+//             if (y < 0) {
+//                 prevSlide();
+//             }
+//         }
+//         timeStart = timeStop;
+//     }
+//
+//
+// 	function prevSlide() {
+// 		if (jQuery(".slide.active").is(":first-child")) {
+// 			// if (!jQuery(".slider").hasClass("dragging")) {
+// 				jQuery(".slide:first-child").addClass("bounce");
+// 				setTimeout(function () {
+// 					jQuery(".slide:first-child").removeClass("bounce");
+// 				}, 300);
+// 			// }
+// 		} else {
+// 			jQuery(".slide.active")
+// 				.removeClass("active")
+// 				.addClass("queue")
+// 				.prev()
+// 				.removeClass("prev")
+// 				.addClass("active");
+// 		}
+// 	}
+//
+// 	function nextSlide() {
+// 		if (jQuery(".active").is(":last-child")) {
+// 			// if (!jQuery(".slider").hasClass("dragging")) {
+// 				jQuery(".slide:last-child").addClass("bounce");
+// 				setTimeout(function () {
+// 					jQuery(".slide:last-child").removeClass("bounce");
+// 				}, 300);
+// 			// }
+// 		} else {
+//             console.log(jQuery(".slide.active")
+//                 .next())
+// 			jQuery(".slide.active")
+// 				.removeClass("active")
+// 				.addClass("prev")
+// 				.next()
+// 				.removeClass("queue")
+// 				.addClass("active");
+//
+// 		}
+// 	}
+//
+//     jQuery(document).on("wheel", wheely);
+
 });
 //counter ends
 
@@ -289,3 +350,94 @@ jQuery(window).bind('scroll', function () {
 		jQuery('#masthead').removeClass('scrolled-navbar');
 	}
 });
+
+
+
+
+// const THRESHOLD = 30;
+// let s = document.getElementById('scrollbox');
+// let children = s.children;
+// let bottoms = [];
+// let scrollHeight;
+// let heightWithoutMargins;
+// for (let i = 0; i < children.length; ++i) {
+// 	let child = children[i];
+// 	let style = child.currentStyle || window.getComputedStyle(child);
+// 	if (i === 0) {
+// 		heightWithoutMargins = parseInt(style.height) +
+// 			parseInt(style.paddingTop) +
+// 			parseInt(style.paddingBottom) +
+// 			parseInt(style.borderTop) +
+// 			parseInt(style.borderBottom);
+// 		scrollHeight = child.offsetTop;
+// 	}
+//
+// 	let bottom = child.offsetTop - scrollHeight + heightWithoutMargins - THRESHOLD;
+// 	bottoms.push(bottom);
+// 	if (i !== 0) {
+// 		child.style.display = 'none';
+// 	}
+// }
+// s.style.height = heightWithoutMargins + 'px';
+// var currentVisible = children[0];
+// var lastScrollTop = 0;
+// s.onscroll = function(e) {
+// 	let y = s.scrollTop;
+// 	console.log(y);
+// 	lastScrollTop = y;
+// 	var firstVisible;
+// 	if (y > lastScrollTop) {
+// 	}
+// 	// 	// down
+// 	for (let i = 0; i < bottoms.length; ++i) {
+// 		let child = children[i];
+// 		if (y < bottoms[i]) {
+// 			firstVisible = child;
+// 			break;
+// 		}
+// 	}
+//
+//
+// 	if (firstVisible !== currentVisible) {
+// 		currentVisible.style.display = 'none';
+// 		currentVisible = firstVisible;
+// 		currentVisible.style.display = 'initial';
+// 	}
+// 	console.log(currentVisible);
+// };
+
+let sliderOptions = {
+	threshold: 0.6,
+	root: document.getElementById('scrollbox'),
+	rootMargin: "-21px 0px 0px 0px"
+};
+if (jQuery(window).width() > 768) {
+let sliderObserver = new IntersectionObserver((entries, observer) => {
+	entries.forEach(entry => {
+			entry.target.classList.toggle("appear", entry.isIntersecting)
+			let element = jQuery(entry.target);
+			if(entry.isIntersecting){
+				element.children('.project-box').addClass('appear');
+			}
+	});
+}, sliderOptions);
+document.querySelectorAll('.slide').forEach(slide => { sliderObserver.observe(slide) });
+}
+
+
+if(jQuery(window).width() < 768){
+let projectBoxObserver = new IntersectionObserver((entries, observer)=>{
+	entries.forEach(entry => {
+			let element = entry.target;
+			if(!entry.isIntersecting){
+				element.classList.remove("appear");
+			}else{
+				let parent = jQuery(element).parent('.slide');
+				parent.addClass('appear');
+				element.classList.add("appear");
+			}
+			entry.target.classList.toggle("appear", entry.isIntersecting);
+	});
+},sliderOptions);
+document.querySelectorAll('.project-box').forEach(box => { projectBoxObserver.observe(box) });
+}

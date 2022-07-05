@@ -20,8 +20,8 @@ get_header();
         get_template_part( 'template-parts/project/archive', 'project' );
         // Archive Project Starts
 
-
         ?>
+
     </main>
 
 <?php
