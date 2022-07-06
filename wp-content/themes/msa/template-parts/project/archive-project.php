@@ -14,7 +14,7 @@ $all_terms = get_terms([
 ]);
 ?>
     <section class="archive-project ks-spt ks-spb ks-smb" data-parallax="scroll"
-             data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/archive-project.png">
+             data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/archive-project.jpg">
         <div class="container">
             <div class="d-flex justify-content-center ks-smb filter-box">
                 <label for=""></label>

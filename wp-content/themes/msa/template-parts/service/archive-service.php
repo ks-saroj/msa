@@ -13,7 +13,7 @@ if ($the_query->have_posts()) :
     ?>
 
     <section class="archive-service ks-spt zks-spb parallax-section" data-parallax="scroll"
-             data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/archive-service.png">
+             data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/archive-service.jpg">
         <div class="container">
             <div class="service-box-container" id="scrollBox">
                 <?php
