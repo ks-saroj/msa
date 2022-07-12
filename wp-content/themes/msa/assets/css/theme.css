@@ -1713,22 +1713,22 @@ footer .footer-logo {
 /**=======================
 * For a Scrollable slider
 =========================*/
-.project-box-container{
+.project-scrollBox{
     height: 555px;
 }
-.service-box-container{
+.service-scrollBox{
     height: 544px;
 }
 
-.project-box-container,
-.service-box-container{
+.project-scrollBox,
+.service-scrollBox{
     overflow-y: scroll;
     position: relative;
     ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
-.project-box-container::-webkit-scrollbar,
-.service-box-container::-webkit-scrollbar
+.project-scrollBox::-webkit-scrollbar,
+.service-scrollBox::-webkit-scrollbar
 {
     display: none;  /* Safari and Chrome */
 }

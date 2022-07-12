@@ -8,13 +8,12 @@ $args = array(
 );
 $the_query = new WP_Query($args);
 
-// The Loop
-if ($the_query->have_posts()) :
+?>
+<section class="archive-service ks-spt zks-spb parallax-section">
+<?php if ($the_query->have_posts()) :
     ?>
-
-    <section class="archive-service ks-spt zks-spb parallax-section">
-        <div class="container">
-            <div class="service-box-container" id="scrollBox">
+        <div class="service-scrollBox" id="scrollBox">
+            <div class="container service-box-container">
                 <?php
                 while ($the_query->have_posts()) :
                     $the_query->the_post();
@@ -36,13 +35,11 @@ if ($the_query->have_posts()) :
                 <?php
                 endwhile;
                 ?>
-
             </div>
         </div>
-    </section>
-
+<?php  endif; ?>
+</section>
 <?php
-endif;
 wp_reset_postdata();
 ?>
 
