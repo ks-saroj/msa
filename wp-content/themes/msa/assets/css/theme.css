@@ -1721,3 +1721,7 @@ footer .footer-logo {
     opacity: 1;
 }
 
+.project-box .post-title{
+    background: transparent;
+}
+
