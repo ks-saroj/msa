@@ -53,33 +53,6 @@ get_header();
     get_template_part( 'template-parts/section-contact-with-map' );
     // Section Contact With Map Ends
 
-//    // Section Service Starts
-//    get_template_part( 'template-parts/section', 'service',array(
-//        'show_counter'  => true,
-//        'show_slider'   => true
-//    ) );
-//    // Section Service Starts
-//
-//
-//    //  Section Intro Start
-//    get_template_part( 'template-parts/section', 'intro' );
-//    //  Section Intro End
-//
-
-//
-//    // Section Partner Starts
-//    get_template_part( 'template-parts/section', 'partner' );
-//    // Section Partner Ends
-//
-//    // Section Projects Starts
-//    get_template_part( 'template-parts/section', 'project' );
-//    // Section Projects Ends
-//
-//
-
-//
-
-
     ?>
     <?php get_template_part( 'template-parts/video/video', 'modal' ); ?>
 

@@ -151,7 +151,7 @@
 		dots: false,
 		infinite: true,
 		speed: 1000,
-		autoplay: true,
+		autoplay: false,
 		autoplaySpeed: 1000,
 		prevArrow: $(".prev3"),
 		nextArrow: $(".next3"),
