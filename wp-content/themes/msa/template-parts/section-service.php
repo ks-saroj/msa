@@ -10,9 +10,7 @@ $the_query = new WP_Query($args);
 // The Loop
 if ($the_query->have_posts()) :
     ?>
-    <section class="service-section ks-spt ks-spb parallax-section" data-parallax="scroll"
-             data-image-src="<?php echo get_template_directory_uri(); ?>/assets/images/service-bg.png"
-             xstyle="background: url('<?php echo get_template_directory_uri(); ?>/assets/images/service-bg.png')">
+    <section class="service-section ks-spt ks-spb">
         <div class="container">
             <a class="no-decoration" href="/our-services/"><h2 class="section-title">Services</h2></a>
 

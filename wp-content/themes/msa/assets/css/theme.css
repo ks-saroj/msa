@@ -517,10 +517,10 @@ Section Emergency Starts
 Section Service Starts
 =========================*/
 .service-section {
-    /*background-attachment: fixed;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
+    background-image: url('../images/service-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 
@@ -627,7 +627,7 @@ Section About Starts
     }
 
     .about-grid-container .right-grid {
-        padding: 60px;
+        padding: 20px 60px 60px 60px;
     }
 
     .about-grid-container .right-grid p {
@@ -699,6 +699,10 @@ Section Partner Starts
 Section Portfolio Starts
 =========================*/
 .project-section {
+    background-image: url('../images/project-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 
@@ -733,6 +737,14 @@ Section Portfolio Starts
     right: 60px;
     width: 24px;
     height: 46px;
+}
+.project-slider--container{
+    max-width: 740px;
+    margin:auto;
+}
+#project-slider img{
+   width: 100%;
+    height: 515px;
 }
 @media (min-width: 768px) {
     .project-section .slider-arrow-box {
@@ -1157,6 +1169,11 @@ footer .footer-logo {
     background-color: #ffffff;
     display: inline-block;
 }
+.archive-service{
+    background-image: url('../images/archive-service.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 @media (min-width: 640px) {
     .service-box-container {
         grid-template-columns: repeat(4, 1fr);
@@ -1232,6 +1249,11 @@ footer .footer-logo {
     margin-bottom: 6px;
     background-color: #ffffff;
     padding: 20px 0;
+}
+.archive-project{
+    background-image: url('../images/archive-service.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 @media (min-width: 640px) {
     .project-box-container {
