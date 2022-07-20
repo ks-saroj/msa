@@ -4,7 +4,7 @@ $args = array(
     'orderby' => 'publish_date',
     'post_type' => 'services',
     'order' => 'DESC',
-    'posts_per_page' => '-1',
+//    'posts_per_page' => '-1',
 );
 $the_query = new WP_Query($args);
 
@@ -31,10 +31,12 @@ $the_query = new WP_Query($args);
                             <h2 class="post-title"><?php the_title(); ?></h2>
                         </a>
                     </div>
-
                 <?php
                 endwhile;
                 ?>
+                <div class="service-load-more">
+                    <button class="ks-btn ks-btn-dark" id="load_more_services_btn">Load More</button>
+                </div>
             </div>
         </div>
 <?php  endif; ?>

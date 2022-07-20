@@ -396,9 +396,9 @@ Hero Section Starts
 .hero-section {
     position: relative;
     background-size: cover;
-    /*margin-bottom: 100px;*/
     background-repeat: no-repeat;
-    height: 550px;
+    height: 400px;
+
 }
 
 .single-post .hero-section,
@@ -470,6 +470,9 @@ Hero Section Starts
     display: none;
 }
 @media (min-width: 768px) {
+    .hero-section{
+        height: 550px;
+    }
     #front-page .hero-section .hero-section-title {
         font-size: 58px;
         line-height: 65px;
@@ -744,11 +747,19 @@ Section Portfolio Starts
 }
 #project-slider img{
    width: 100%;
-    height: 515px;
+    height: 315px;
+}
+@media screen and (min-width: 768px) {
+    #project-slider img{
+        height: 410px;
+    }
 }
 @media (min-width: 768px) {
     .project-section .slider-arrow-box {
         display: inline-block;
+    }
+    #project-slider img{
+        height: 515px;
     }
 }
 
@@ -1150,7 +1161,7 @@ footer .footer-logo {
     margin-bottom: 25px;
 }
 .service-box-container .service-box figure img {
-    height: 460px;
+    height: 275px;
     border-radius: 20px;
 }
 .service-box a {
@@ -1174,20 +1185,35 @@ footer .footer-logo {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.service-load-more{
+    grid-column-start: 1;
+    justify-self: center;
+}
+
 @media (min-width: 640px) {
     .service-box-container {
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
     }
+    .service-load-more{
+        grid-column-end: 5;
+    }
 }
 @media (min-width: 768px) {
-    .archive-service{
+    .archive-service {
         padding-bottom: 100px;
+    }
+
+    .service-box-container .service-box figure img{
+        height: 460px;
     }
 }
 @media (min-width: 1024px) {
     .service-box-container {
         grid-template-columns: repeat(6, 1fr);
+    }
+    .service-load-more{
+        grid-column-end: 7;
     }
     .service-box-container .service-box:nth-child(5n+4),
     .service-box-container .service-box:nth-child(5n+5){
@@ -1223,7 +1249,7 @@ footer .footer-logo {
 }
 
 .project-box-container .project-box figure img {
-    height: 427px;
+    height: 315px;
 }
 
 .project-box {
@@ -1255,20 +1281,37 @@ footer .footer-logo {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.project-load-more{
+    grid-column-start: 1;
+    justify-self: center;
+}
 @media (min-width: 640px) {
     .project-box-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .project-load-more{
+        grid-column-end: 3;
+    }
+}
+@media screen and (min-width: 768px) {
+    .project-box-container .project-box figure img{
+        height: 427px;
     }
 }
 @media (min-width: 991px) {
     .project-box-container {
         grid-template-columns: repeat(3, 1fr);
     }
+    .project-load-more{
+        grid-column-end: 4;
+    }
 }
 @media (max-width: 767px) {
     .archive-project .ks-spb{
         padding-bottom: 0;
     }
+
 }
 /*****************************
   Featured Service Starts
@@ -1361,18 +1404,25 @@ footer .footer-logo {
     margin-bottom: 60px;
 }
 
-.sustainability--top-flex-image-container,
-.sustainability--top-flex-image-container img{
+.sustainability--top-flex-image-container{
+ width: 100%;
+}
+
+.sustainability--top-flex-image-container img {
+    object-fit: contain;
+    max-height: 300px;
     width: 100%;
-    height: 360px;
 }
 
 .sustainability--bottom-flex-image-container,
 .sustainability--bottom-flex-image-container img{
     width: 100%;
-    height: 700px;
+    height: 500px;
 }
 
+.sustainability--bottom-flex-image-container img{
+    object-fit: contain;
+}
 
 
 .sustainability--title {
@@ -1388,6 +1438,7 @@ footer .footer-logo {
 .sustainability--bottom-flex-item > div:not(:last-child) {
     margin-bottom: 60px;
 }
+
 @media (min-width: 768px) {
     .sustainability--top-flex,
     .sustainability--bottom-flex {
@@ -1399,16 +1450,12 @@ footer .footer-logo {
         flex: 1;
     }
 
-    .sustainability--top-flex-image-container,
-    .sustainability--bottom-flex-image-container{
+
+    .sustainability--bottom-flex-image-container,
+    .sustainability--bottom-flex-image-container img{
         height: unset;
     }
-
-    .sustainability--bottom-flex-image-container img{
-        height: 100%;
-    }
     .sustainability--top-flex-image-container img{
-        height: 100%;
         max-height: 640px;
         min-height: 350px;
     }
@@ -1416,7 +1463,11 @@ footer .footer-logo {
     .sustainability--bottom-flex{
         flex-direction: row;
     }
-
+}
+@media (min-width: 992px) {
+    .sustainability--top-flex-image-container img {
+        object-fit: cover;
+    }
 }
 /*****************************
   Career Starts
@@ -1436,6 +1487,7 @@ footer .footer-logo {
 .career--image-container img{
     height: 450px;
     width: 100%;
+    object-fit: contain;
 }
 
 .career--text {
@@ -1583,8 +1635,15 @@ footer .footer-logo {
 .single-project--text ul li{
     list-style: disc;
 }
+.single-project-client-img{
+    max-height: 90px;
+}
 
 @media (min-width: 768px) {
+    .single-project-client-img{
+        max-height: 115px;
+    }
+
     .project-content-flex{
         flex-wrap: nowrap;
     }
@@ -1714,10 +1773,10 @@ footer .footer-logo {
 * For a Scrollable slider
 =========================*/
 .project-scrollBox{
-    height: 555px;
+    height: 384px;
 }
 .service-scrollBox{
-    height: 544px;
+    height: 359px;
 }
 
 .project-scrollBox,
@@ -1743,7 +1802,23 @@ footer .footer-logo {
     opacity: 1;
 }
 
-.project-box .post-title{
+.project-box .post-title,
+.service-box .post-title{
     background: transparent;
 }
 
+@media screen and (min-width: 768px) {
+    .service-scrollBox{
+            height: 554px;
+    }
+
+    .project-scrollBox{
+        height: 496px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .project-scrollBox{
+        height: 525px;
+    }
+}

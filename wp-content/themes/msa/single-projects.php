@@ -67,7 +67,7 @@ $project_gallery = CFS()->get('gallery');
                         </h2>
                         <figure class="mb-0">
                             <img src="<?php echo $client['url']; ?>" alt="<?php echo $client['alt']; ?>"
-                                 class="img-fluid cover-image">
+                                 class="img-fluid cover-image single-project-client-img">
                         </figure>
 
                     </div>

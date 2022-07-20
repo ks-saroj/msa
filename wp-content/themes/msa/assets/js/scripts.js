@@ -299,7 +299,7 @@ let sliderOptions = {
 	root: document.getElementById('scrollBox'),
 	rootMargin: "-100px 0px -140px 0px"
 };
-let sliderObserver = new IntersectionObserver((entries, observer) => {
+var sliderObserver = new IntersectionObserver((entries, observer) => {
 	entries.forEach(entry => {
 			entry.target.classList.toggle("appear", entry.isIntersecting)
 	});

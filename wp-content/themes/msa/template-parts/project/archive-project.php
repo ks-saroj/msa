@@ -4,7 +4,6 @@ $args = array(
     'orderby' => 'publish_date',
     'post_type' => 'projects',
     'order' => 'DESC',
-    'posts_per_page' => '-1',
 );
 $the_query = new WP_Query($args);
 
@@ -30,7 +29,7 @@ $all_terms = get_terms([
                         if ($the_query->have_posts()) :
                             ?>
                             <div class="project-scrollBox" id="scrollBox">
-                                <div class="container project-box-container">
+                                <div class="container project-box-container" id="ajax-projects">
                                     <?php
                                     $i = 0;
                                     while ($the_query->have_posts()) :
@@ -39,22 +38,28 @@ $all_terms = get_terms([
                                         $terms = get_the_terms(get_the_ID(), 'projects-categories');
                                         $terms = join(' ', wp_list_pluck($terms, 'slug'));
                                         ?>
-                                        <div class="project-box
-                                        <?php echo $terms; ?>">
-                                            <a href="<?php the_permalink(); ?>">
-                                                <figure class="mb-0">
-                                                    <img src="<?php echo $custom_thumbnail['url'] ?>"
-                                                         class="img-fluid cover-image w-100" alt="">
-                                                </figure>
-                                            </a>
-                                            <a href="<?php the_permalink(); ?>">
-                                                <h2 class="post-title mb-0"><?php the_title(); ?></h2>
-                                            </a>
+                                        <div class="project-box">
+                                            <div class="
+                                            <?php echo $terms; ?>">
+
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <figure class="mb-0">
+                                                        <img src="<?php echo $custom_thumbnail['url'] ?>"
+                                                             class="img-fluid cover-image w-100" alt="">
+                                                    </figure>
+                                                </a>
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <h2 class="post-title mb-0"><?php the_title(); ?></h2>
+                                                </a>
+                                            </div>
                                         </div>
                                     <?php
                                     $i= $i+1;
                                     endwhile;
                                     ?>
+                                    <div class="project-load-more">
+                                        <button class="ks-btn ks-btn-dark" id="load_more_projects_btn">Load More</button>
+                                    </div>
                                 </div>
                             </div>
                         <?php endif; ?>

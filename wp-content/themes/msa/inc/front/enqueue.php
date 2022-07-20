@@ -58,6 +58,16 @@ function msa_scripts() {
     wp_enqueue_script('msa-magnific-pop-up');
     wp_enqueue_script('msa-scripts');
 
+    //load more script starts
+    wp_register_script( 'msa-load-more', get_template_directory_uri() . '/assets/js/load-more.js', array('jquery'), $ver, true );
+    wp_enqueue_script('msa-load-more');
+    wp_localize_script( 'msa-load-more', 'ajax_posts', array(
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'noposts' => __('No older posts found', 'msa'),
+    ));
+    //load more script ends
+
+
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }

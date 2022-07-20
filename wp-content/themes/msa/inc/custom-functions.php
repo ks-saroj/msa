@@ -178,3 +178,102 @@ function ks_generate_theme_option_css(){
 }
 
 //add_action( 'wp_head', 'ks_generate_theme_option_css' );
+
+
+
+//load more projects via ajax
+function more_project_ajax(){
+    $posts_per_page = (isset($_POST["post_per_page"])) ? $_POST["post_per_page"] : 3;
+    $page = (isset($_POST['projectPageNumber'])) ? $_POST['projectPageNumber'] : 0;
+    header("Content-Type: text/html");
+
+    $args = array(
+        'posts_per_page'     =>     $posts_per_page,
+        'post_status'        =>     'publish',
+        'orderby'            =>     'publish_date',
+        'post_type'          =>     'projects',
+        'order'              =>     'DESC',
+        'paged'              =>     $page,
+    );
+    $out = [];
+
+    $loop = new WP_Query($args);
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+        $custom_thumbnail = get_field('custom_thumbnail');
+        $terms = get_the_terms(get_the_ID(), 'projects-categories');
+        $terms = join(' ', wp_list_pluck($terms, 'slug'));
+
+       $out[] = '<div class="'.$terms.'">'.
+                    '<a href="'.get_the_permalink().'">'.
+                        '<figure class="mb-0">'.
+                            '<img src="'.$custom_thumbnail['url'].'" class="img-fluid cover-image w-100" alt="">'.
+                        '</figure>'.
+                    '</a>'.
+                    '<a href="'.get_the_permalink().'">'.
+                        '<h2 class="post-title mb-0">'.get_the_title().'</h2>'
+                    .'</a>'
+                .'</div>';
+    endwhile;
+    endif;
+    if ( $page == $loop->max_num_pages ) {
+        $hide_load_more = TRUE;
+    }
+    wp_reset_postdata();
+    $resp = [
+        'data'              => $out,
+        'hide_load_more'  => $hide_load_more ?? NULL,
+    ];
+    echo json_encode($resp);
+    exit();
+}
+
+add_action('wp_ajax_nopriv_more_project_ajax', 'more_project_ajax');
+add_action('wp_ajax_more_project_ajax', 'more_project_ajax');
+
+//load more services via ajax
+function more_service_ajax(){
+    $postsp_er_page = (isset($_POST["post_per_page"])) ? $_POST["post_per_page"] : 5;
+    $page = (isset($_POST['projectPageNumber'])) ? $_POST['projectPageNumber'] : 0;
+    header("Content-Type: text/html");
+
+    $args = array(
+        'post_status'       => 'publish',
+        'orderby'           => 'publish_date',
+        'post_type'         => 'services',
+        'order'             => 'DESC',
+        'posts_per_page'    =>  5,
+        'paged'             =>  $page,
+    );
+
+    $out = [];
+
+    $loop = new WP_Query($args);
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+        $custom_thumbnail = get_field('custom_thumbnail');
+        $out[] = '<div>'.
+                        '<a href="'.get_the_permalink().'">'.
+                            '<figure>'.
+                                '<img src="'.$custom_thumbnail['url'].'" class="img-fluid cover-image w-100" alt="">'.
+                            '</figure>'.
+                        '</a>'.
+                        '<a href="'.get_the_permalink().'">'.
+                            '<h2 class="post-title">'.get_the_title().'</h2>'.
+                        '</a>'.
+                '</div>';
+    endwhile;
+    endif;
+    if ( $page == $loop->max_num_pages ) {
+        $hide_load_more = TRUE;
+    }
+    wp_reset_postdata();
+    $resp = [
+        'data'              => $out,
+        'hide_load_more'  => $hide_load_more ?? NULL,
+    ];
+    echo json_encode($resp);
+    exit();
+}
+
+add_action('wp_ajax_nopriv_more_service_ajax', 'more_service_ajax');
+add_action('wp_ajax_more_service_ajax', 'more_service_ajax');
+
